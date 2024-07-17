@@ -1,7 +1,6 @@
 <?php
-//defined('BASEPATH') OR exit('No direct script access allowed');
-namespace App\Models;
 
+namespace App\Models;
 use CodeIgniter\Model;
 
 class Usuarios_model extends Model {
@@ -12,47 +11,32 @@ class Usuarios_model extends Model {
 
     public function getUsuarios()
     {
-        return $this->select("u.*,r.nombre as rol")
+        return $this->select("usuarios.*,roles.nombre as rol")
                //$this->db->from("usuarios u");
-                ->join("roles r","u.rol_id = r.id")
-                ->where("u.estado","1")
+                ->join("roles","usuaris.rol_id = roles.id")
+                ->where("usuarios.estado","1")
                 ->findAll();
     }
 
     public function getUsuario($id)
     {
-        return $this->select("u.*,r.nombre as rol")
+        return $this->select("usuarios.*,roles.nombre as rol")
         // $this->db->from("usuarios u");
-                ->join("roles r","u.rol_id = r.id")
-                ->where("u.id",$id)
-                ->where("u.estado","1")
+                ->join("roles","usuarios.rol_id = roles.id")
+                ->where("usuarios.id",$id)
+                ->where("usuarios.estado","1")
                 ->first();
     } 
 
     public function getRoles()
     {
         return $this->db->table('roles')
-                    ->limit(4,1)
-                    ->get()
-                    ->getResultArray();
-
-        // $this->db->select("r.*");
-        // $this->db->from("roles r");
-        // $this->db->limit("4","1");
-        // $resultados = $this->db->get();
-        // return $resultados->result();
+                        ->select('*')
+                        ->limit(4,1)
+                        ->get()
+                        ->getResultArray();
+        
     }
-
-    // public function save($data)
-    // {
-    //     return $this->save($data);
-    // }
-
-    // public function update($id=null,$data=null): bool
-    // {
-	// 	//$this->db->where("id",$id);
-	// 	return $this->update($id,$data);
-	// }
 
     public function login($username, $password)
     {

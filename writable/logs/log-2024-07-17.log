@@ -1,0 +1,358 @@
+INFO - 2024-07-17 00:16:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-17 00:16:46 --> Error: Call to undefined function App\Controllers\Registrar\compat()
+[Method: GET, Route: registrar/alumnos]
+in APPPATH\Controllers\registrar\Alumnos.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-17 00:17:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-17 00:17:12 --> ErrorException: compact(): Undefined variable $9
+[Method: GET, Route: registrar/alumnos]
+in APPPATH\Controllers\registrar\Alumnos.php on line 23.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'compact(): Undefined variable $9', 'C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Controllers\\registrar\\Alumnos.php', 23)
+ 2 APPPATH\Controllers\registrar\Alumnos.php(23): compact([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->index()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-17 00:18:00 --> Error: Class "App\Controllers\Registrar\BaseController" not found
+[Method: GET, Route: registrar/alumnos]
+in APPPATH\Controllers\registrar\Alumnos.php on line 8.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Controllers\\Registrar\\Alumnos.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Registrar\\Alumnos')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Registrar\\Alumnos')
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Registrar\\Alumnos', true)
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-17 00:18:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-17 00:18:15 --> ErrorException: Undefined array key "username"
+[Method: GET, Route: registrar/alumnos]
+in APPPATH\Views\admin\alumnos\list.php on line 61.
+ 1 APPPATH\Views\admin\alumnos\list.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', 'C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\list.php', 61)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\list.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/list', [], true)
+ 5 APPPATH\Controllers\registrar\Alumnos.php(23): view('admin/alumnos/list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-17 03:20:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-17 03:20:42 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: registrar/alumnos]
+in APPPATH\Views\admin\alumnos\list.php on line 58.
+ 1 APPPATH\Views\admin\alumnos\list.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\list.php', 58)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\list.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/list', [], true)
+ 5 APPPATH\Controllers\registrar\Alumnos.php(23): view('admin/alumnos/list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-17 03:21:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 04:19:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-17 04:19:36 --> ParseError: syntax error, unexpected token "endforeach", expecting end of file
+[Method: GET, Route: registrar/alumnos]
+in APPPATH\Views\admin\alumnos\list.php on line 67.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/list', [], true)
+ 3 APPPATH\Controllers\registrar\Alumnos.php(23): view('admin/alumnos/list', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-17 04:20:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-17 04:20:46 --> ParseError: syntax error, unexpected token "endforeach", expecting end of file
+[Method: GET, Route: registrar/alumnos]
+in APPPATH\Views\admin\alumnos\list.php on line 76.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/list', [], true)
+ 3 APPPATH\Controllers\registrar\Alumnos.php(23): view('admin/alumnos/list', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-17 04:26:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-17 04:26:19 --> ParseError: syntax error, unexpected token "endforeach", expecting end of file
+[Method: GET, Route: registrar/alumnos]
+in APPPATH\Views\admin\alumnos\list.php on line 75.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/list', [], true)
+ 3 APPPATH\Controllers\registrar\Alumnos.php(23): view('admin/alumnos/list', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-17 04:27:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-17 04:27:31 --> ParseError: syntax error, unexpected token "endforeach", expecting "elseif" or "else" or "endif"
+[Method: GET, Route: registrar/alumnos]
+in APPPATH\Views\admin\alumnos\list.php on line 76.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/list', [], true)
+ 3 APPPATH\Controllers\registrar\Alumnos.php(23): view('admin/alumnos/list', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-17 04:28:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-17 04:28:03 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: registrar/alumnos]
+in APPPATH\Views\admin\alumnos\list.php on line 58.
+ 1 APPPATH\Views\admin\alumnos\list.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\list.php', 58)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\list.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/list', [], true)
+ 5 APPPATH\Controllers\registrar\Alumnos.php(23): view('admin/alumnos/list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-17 04:29:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-17 04:29:10 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: registrar/alumnos]
+in APPPATH\Views\admin\alumnos\list.php on line 58.
+ 1 APPPATH\Views\admin\alumnos\list.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\list.php', 58)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\list.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/list', [], true)
+ 5 APPPATH\Controllers\registrar\Alumnos.php(23): view('admin/alumnos/list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-17 04:29:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-17 04:29:12 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: registrar/alumnos]
+in APPPATH\Views\admin\alumnos\list.php on line 58.
+ 1 APPPATH\Views\admin\alumnos\list.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\list.php', 58)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\list.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/list', [], true)
+ 5 APPPATH\Controllers\registrar\Alumnos.php(23): view('admin/alumnos/list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-17 04:30:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-17 04:30:18 --> ErrorException: Attempt to read property "id" on array
+[Method: GET, Route: registrar/alumnos]
+in APPPATH\Views\admin\alumnos\list.php on line 58.
+ 1 APPPATH\Views\admin\alumnos\list.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on array', 'C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\list.php', 58)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\list.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/list', [], true)
+ 5 APPPATH\Controllers\registrar\Alumnos.php(23): view('admin/alumnos/list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-17 04:30:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 04:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 04:30:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 04:31:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 04:31:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 04:31:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-17 04:31:15 --> ErrorException: Attempt to read property "id" on array
+[Method: GET, Route: registrar/alumnos]
+in APPPATH\Views\admin\alumnos\list.php on line 58.
+ 1 APPPATH\Views\admin\alumnos\list.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on array', 'C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\list.php', 58)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\list.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/list', [], true)
+ 5 APPPATH\Controllers\registrar\Alumnos.php(23): view('admin/alumnos/list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-17 04:35:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-17 04:35:08 --> ErrorException: Attempt to read property "id" on array
+[Method: GET, Route: registrar/alumnos]
+in APPPATH\Views\admin\alumnos\list.php on line 58.
+ 1 APPPATH\Views\admin\alumnos\list.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on array', 'C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\list.php', 58)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\list.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/list', [], true)
+ 5 APPPATH\Controllers\registrar\Alumnos.php(23): view('admin/alumnos/list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-17 04:41:17 --> ParseError: syntax error, unexpected identifier "print_r", expecting "," or ";"
+[Method: GET, Route: registrar/alumnos]
+in APPPATH\Controllers\registrar\Alumnos.php on line 22.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Controllers\\Registrar\\Alumnos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Registrar\\Alumnos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Registrar\\Alumnos')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Registrar\\Alumnos', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-17 04:41:54 --> ParseError: syntax error, unexpected identifier "print_r", expecting "," or ";"
+[Method: GET, Route: registrar/alumnos]
+in APPPATH\Controllers\registrar\Alumnos.php on line 22.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Controllers\\Registrar\\Alumnos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Registrar\\Alumnos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Registrar\\Alumnos')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Registrar\\Alumnos', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-17 04:42:09 --> ParseError: syntax error, unexpected identifier "print_r", expecting "," or ";"
+[Method: GET, Route: registrar/alumnos]
+in APPPATH\Controllers\registrar\Alumnos.php on line 22.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Controllers\\Registrar\\Alumnos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Registrar\\Alumnos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Registrar\\Alumnos')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Registrar\\Alumnos', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-17 04:42:16 --> ParseError: syntax error, unexpected identifier "print_r", expecting "," or ";"
+[Method: GET, Route: registrar/alumnos]
+in APPPATH\Controllers\registrar\Alumnos.php on line 22.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Controllers\\Registrar\\Alumnos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Registrar\\Alumnos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Registrar\\Alumnos')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Registrar\\Alumnos', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-17 04:42:55 --> ParseError: syntax error, unexpected identifier "print_r", expecting "," or ";"
+[Method: GET, Route: registrar/alumnos]
+in APPPATH\Controllers\registrar\Alumnos.php on line 22.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Controllers\\Registrar\\Alumnos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Registrar\\Alumnos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Registrar\\Alumnos')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Registrar\\Alumnos', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-17 04:43:57 --> ParseError: syntax error, unexpected identifier "print_r", expecting "," or ";"
+[Method: GET, Route: registrar/alumnos]
+in APPPATH\Controllers\registrar\Alumnos.php on line 22.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Controllers\\Registrar\\Alumnos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Registrar\\Alumnos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Registrar\\Alumnos')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Registrar\\Alumnos', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-17 04:44:00 --> ParseError: syntax error, unexpected identifier "print_r", expecting "," or ";"
+[Method: GET, Route: registrar/alumnos]
+in APPPATH\Controllers\registrar\Alumnos.php on line 22.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Controllers\\Registrar\\Alumnos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Registrar\\Alumnos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Registrar\\Alumnos')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Registrar\\Alumnos', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-17 05:19:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-17 05:19:34 --> ErrorException: Undefined variable $data
+[Method: GET, Route: registrar/alumnos]
+in APPPATH\Views\admin\alumnos\list.php on line 36.
+ 1 APPPATH\Views\admin\alumnos\list.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\list.php', 36)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\list.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/list', [], true)
+ 5 APPPATH\Controllers\registrar\Alumnos.php(29): view('admin/alumnos/list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-17 05:19:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-17 05:19:59 --> ErrorException: Attempt to read property "id" on array
+[Method: GET, Route: registrar/alumnos]
+in APPPATH\Views\admin\alumnos\list.php on line 58.
+ 1 APPPATH\Views\admin\alumnos\list.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on array', 'C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\list.php', 58)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\list.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/list', [], true)
+ 5 APPPATH\Controllers\registrar\Alumnos.php(29): view('admin/alumnos/list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-17 05:25:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-17 05:25:05 --> ErrorException: Undefined property: stdClass::$ceAcudiente
+[Method: GET, Route: registrar/alumnos]
+in APPPATH\Views\admin\alumnos\list.php on line 65.
+ 1 APPPATH\Views\admin\alumnos\list.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$ceAcudiente', 'C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\list.php', 65)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\list.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/list', [], true)
+ 5 APPPATH\Controllers\registrar\Alumnos.php(29): view('admin/alumnos/list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-17 05:26:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-17 05:26:09 --> ErrorException: Attempt to read property "id" on array
+[Method: GET, Route: registrar/alumnos]
+in APPPATH\Views\admin\alumnos\list.php on line 69.
+ 1 APPPATH\Views\admin\alumnos\list.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on array', 'C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\list.php', 69)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\list.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/list', [], true)
+ 5 APPPATH\Controllers\registrar\Alumnos.php(29): view('admin/alumnos/list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-17 05:26:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

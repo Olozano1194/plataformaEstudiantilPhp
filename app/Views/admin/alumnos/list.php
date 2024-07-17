@@ -19,20 +19,21 @@
                     </div>
                 </div>
                 <hr>
-                <?php if($this->session->flashdata("Registrado")):?>
+                <?php if(session()->getFlashdata("Registrado")):?>
                     <div class="alert alert-success alert-dismissible">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                        <p><i class="icon fa fa-check-circle"></i><?php echo $this->session->flashdata("Registrado"); ?></p>                                
+                        <p><i class="icon fa fa-check-circle"></i><?php echo session()->getFlashdata("Registrado"); ?></p>                                
                     </div>
                     <hr>
                 <?php endif;?> 
-                <?php if($this->session->flashdata("Actualizado")):?>
+                <?php if(session()->getFlashdata("Actualizado")):?>
                     <div class="alert alert-warning alert-dismissible">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                        <p><i class="icon fa fa-check-circle"></i><?php echo $this->session->flashdata("Actualizado"); ?></p>                                
+                        <p><i class="icon fa fa-check-circle"></i><?php echo session()->getFlashdata("Actualizado"); ?></p>                                
                     </div>
                     <hr>
-                <?php endif;?> 
+                <?php endif;?>
+                
                 
                 <div class="row">
                     <div class="col-md-12">
@@ -52,26 +53,32 @@
                             </thead>
                             <tbody>
                                 <?php if(!empty($alumnos)):?>
-                                    <?php foreach($alumnos as $alumnos):?>
+                                    <?php foreach($alumnos as $alumno):?>
                                         <tr>
-                                            <td><?php echo $alumnos->id;?></td>
-                                            <td><?php echo $alumnos->nombres;?></td>
-                                            <td><?php echo $alumnos->email;?></td>
-                                            <td><?php echo $alumnos->celular;?></td>
-                                            <td><?php echo $alumnos->usuario;?></td>
+                                            <td><?= $alumno->id; ?></td>
+                                            <td><?= $alumno->nombres; ?></td>
+                                            <td><?= $alumno->email; ?></td>
+                                            <td><?= $alumno->celular; ?></td>
+                                            <td><?= $alumno->usuario; ?></td>
                                             <td></td>
-                                            <td><?php echo $alumnos->nomAcudiente;?></td>
-                                            <td><?php echo $alumnos->celAcudiente;?></td>
+                                            <td><?= $alumno->nomAcudiente; ?></td>
+                                            <td><?= $alumno->celAcudiente; ?></td>
                                             <td>
                                                 <div class="btn-group">
+
                                                     <a href="<?php echo base_url()?>registrar/alumnos/edit/<?php echo $alumnos->id;?>" title="Actualizar" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
-                                                    <a href="<?php echo base_url();?>registrar/alumnos/disable/<?php echo $alumnos->usuario_id;?>" title="Desactivar Usuario" class="btn btn-info btn-disable"><span class="fa fa-user-times"></span></a>
-                                                    <a href="<?php echo base_url();?>registrar/alumnos/delete/<?php echo $alumnos->id;?>" title="Eliminar" class="btn btn-danger btn-remove"><span class="fa fa-remove"></span></a>
+                                                    <a href="" title="Desactivar Usuario" class="btn btn-info btn-disable"><span class="fa fa-user-times"></span></a>
+                                                    <a href="" title="Eliminar" class="btn btn-danger btn-remove"><span class="fa fa-remove"></span></a>
                                                 </div>
                                             </td>
                                         </tr>
+                                    
                                     <?php endforeach;?>
-                                <?php endif;?>
+                                    <?php else: ?>
+                                        <tr>
+                                            <td colspan="9">No hay estudiantes registrados.</td>
+                                        </tr>
+                                    <?php endif;?>
                             </tbody>
                         </table>
                     </div>

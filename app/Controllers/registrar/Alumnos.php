@@ -1,244 +1,267 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+//defined('BASEPATH') OR exit('No direct script access allowed');
+namespace App\Controllers\Registrar;
 
-class Alumnos extends CI_Controller {
+use App\Models\Alumnos_model;
+use CodeIgniter\Controller;
 
-    
-    public function __construct()
-    {
-        parent::__construct();
-        $this->load->model("Alumnos_model");
-    }
-
+class Alumnos extends Controller {
+   
     public function index()
 	{
-        $data = array(
-            
-            'alumnos' => $this->Alumnos_model->getAlumnos(),
-        );
-        $this->load->view('layouts/header');
-        $this->load->view('layouts/aside',$data);
-        $this->load->view('admin/alumnos/list',$data);
-        $this->load->view('layouts/footer');
-    }
+        $alumnosModel = new Alumnos_model();
 
-    public function add()
-    {
-        $fechaIngreso = date('Y-m-d');
-        $data = array(
-            'genero' => $this->Alumnos_model->getGeneros(),
-            'tipoDocumento' => $this->Alumnos_model->getTipoDocumentos(),
-            'acudiente' => $this->Alumnos_model->getAcudientes(),
-            'grupoSanguineo' => $this->Alumnos_model->getGrupoSanguineo(),
-            'fechaIngreso' => $fechaIngreso
-        );
+        $data['alumnos'] = $alumnosModel->getAlumnos();
 
-        $this->load->view('layouts/header');
-        $this->load->view('layouts/aside',$data);
-        $this->load->view('admin/alumnos/add',$data);
-        $this->load->view('layouts/footer');
-    }    
-
-    public function store()
-    {
-        $nombres = $this->input->post("nombres");
-		$tipoDocumento = $this->input->post("tipoDocumento");
-		$num_documento = $this->input->post("num_documento");
-        $genero = $this->input->post("genero");
-        $grupoSanguineo = $this->input->post("grupoSanguineo");
-        $fecha_nacimiento = $this->input->post("fecha_nacimiento");
-        $email = $this->input->post("email");
-        $celular = $this->input->post("celular");
-        $direccion = $this->input->post("direccion");
-        $acudiente = $this->input->post("acudiente");
-
-        $username = $this->input->post("username");
-        $password = $this->input->post("password");
-        $fechaIngreso = $this->input->post("fechaIngreso");
-
-        $this->form_validation->set_rules("nombres","Nombre Completo","required");
-        $this->form_validation->set_rules("tipoDocumento","Seleccionar Tipo de Documento","required");
-        $this->form_validation->set_rules("num_documento","Numero de Documento","required|is_unique[estudiantes.num_documento]");
-        $this->form_validation->set_rules("genero","Seleccionar Genero","required");
-        $this->form_validation->set_rules("grupoSanguineo","Seleccionar Grupo Sanguineo","required");
-        $this->form_validation->set_rules("fecha_nacimiento","Fecha Nacimiento","required");
-        $this->form_validation->set_rules("email","Email","required|is_unique[estudiantes.email]");
-        $this->form_validation->set_rules("celular","Celular","required");
-        $this->form_validation->set_rules("direccion","Direccion","required");
-        $this->form_validation->set_rules("acudiente","Seleccionar Acudiente","required");
-        $this->form_validation->set_rules("username","Username","required");
-        $this->form_validation->set_rules("password","Password","required");
-
-        if ($this->form_validation->run())
-        {
-            $data = array(
-                'username' => $username,
-                'password' => sha1($password),
-                'dia_ingreso' => $fechaIngreso,
-                'rol_id' => "4" ,
-                'estado' => "1"                 
-            );
-            if ($this->Alumnos_model->saveUsuario($data)) {
-                $idUsuario = $this->Alumnos_model->lastID();
-                $this->saveEstudiante($idUsuario,$tipoDocumento,$num_documento,$nombres,$fecha_nacimiento,$genero,$email,$celular,$direccion,$grupoSanguineo,$acudiente);
-                $this->session->set_flashdata("Registrado","La información se guardo exitosamente");
-                redirect(base_url()."registrar/alumnos");
-            }
-            else {
-                $this->session->set_flashdata("Error","No se pudo guardar la informacion");
-                redirect(base_url()."registrar/alumnos/add");
-            }
+        if (empty($data['alumnos'])) {
+            $data['alumnos'] = [];
         }
-        else {
-            $this->add();
-        }       
-    }
-    protected function saveEstudiante($idUsuario,$tipoDocumento,$num_documento,$nombres,$fecha_nacimiento,$genero,$email,$celular,$direccion,$grupoSanguineo,$acudiente)
-    { 
-        $data  = array(
 
-            'tipodocumento_id' => $tipoDocumento,
-            'num_documento' => $num_documento,
-            'nombres' => $nombres, 
-            'fecha_nacimiento' => $fecha_nacimiento,
-            'genero_id' => $genero,
-            'email' => $email,
-            'celular' => $celular,
-            'direccion' => $direccion,
-            'gruposanguineo_id' => $grupoSanguineo,
-            'estado' => "1" ,
-            'acudiente_id' => $acudiente,
-            'usuario_id' => $idUsuario
+        //depuracion
+        // echo "<pre>";
+        // print_r($data['alumnos']);
+        // echo "</pre>";
+        // exit;
+               
                 
-        );
-
-        $this->Alumnos_model->saveEstudiante($data); 
+        echo view('layouts/header');
+        echo view('layouts/aside', $data);
+        echo view('admin/alumnos/list', $data);
+        echo view('layouts/footer');
     }
-   
-    public function edit($id)
-    {
-		$data  = array(
-            'alumno' => $this->Alumnos_model->getAlumno($id),
-            'genero' => $this->Alumnos_model->getGeneros(),
-            'tipoDocumento' => $this->Alumnos_model->getTipoDocumentos(),
-            'acudiente' => $this->Alumnos_model->getAcudientes(),
-            'grupoSanguineo' => $this->Alumnos_model->getGrupoSanguineo(),
-        );
+
+    // public function add()
+    // {
+    //     $alumnosModel = new Alumnos_model();
+
+    //     $fechaIngreso = date('Y-m-d');
+    //     $data = [
+    //         'genero' => $this->Alumnos_model->getGeneros(),
+    //         'tipoDocumento' => $this->Alumnos_model->getTipoDocumentos(),
+    //         'acudiente' => $this->Alumnos_model->getAcudientes(),
+    //         'grupoSanguineo' => $this->Alumnos_model->getGrupoSanguineo(),
+    //         'fechaIngreso' => $fechaIngreso
+    //     ];
         
-		$this->load->view("layouts/header");
-		$this->load->view("layouts/aside",$data);
-		$this->load->view("admin/alumnos/edit",$data);
-		$this->load->view("layouts/footer");
-    }
+    //     echo view('layouts/header');
+    //     echo view('layouts/aside',$data);
+    //     echo view('admin/alumnos/add',$data);
+    //     echo view('layouts/footer');
+    // }    
 
-    public function update()
-    {
-        $idAlumno = $this->input->post("idAlumno");
-        $idUsuario = $this->input->post("idUsuario");
-        $nombres = $this->input->post("nombres");
-		$tipoDocumento = $this->input->post("tipoDocumento");
-		$num_documento = $this->input->post("num_documento");
-        $genero = $this->input->post("genero");
-        $grupoSanguineo = $this->input->post("grupoSanguineo");
-        $fecha_nacimiento = $this->input->post("fecha_nacimiento");
-        $email = $this->input->post("email");
-        $celular = $this->input->post("celular");
-        $direccion = $this->input->post("direccion");
-        $acudiente = $this->input->post("acudiente");
+    // public function store()
+    // {
+    //     $alumnosModel = new Alumnos_model();
 
-        $username = $this->input->post("username");
-        $password = $this->input->post("password");
-        $fechaIngreso = $this->input->post("fechaIngreso");
+    //     $nombres = $this->request->getPost("nombres");
+	// 	$tipoDocumento = $this->request->getPost("tipoDocumento");
+	// 	$num_documento = $this->request->getPost("num_documento");
+    //     $genero = $this->request->getPost("genero");
+    //     $grupoSanguineo = $this->request->getPost("grupoSanguineo");
+    //     $fecha_nacimiento = $this->request->getPost("fecha_nacimiento");
+    //     $email = $this->request->getPost("email");
+    //     $celular = $this->request->getPost("celular");
+    //     $direccion = $this->request->getPost("direccion");
+    //     $acudiente = $this->request->getPost("acudiente");
 
-        $alumnoActual = $this->Alumnos_model->getAlumno($idAlumno);
+    //     $username = $this->request->getPost("username");
+    //     $password = $this->request->getPost("password");
+    //     $fechaIngreso = $this->request->getPost("fechaIngreso");
 
-        $this->form_validation->set_rules("nombres","Nombre Completo","required");
-        $this->form_validation->set_rules("tipoDocumento","Seleccionar Tipo de Documento","required");
-        if ($num_documento == $alumnoActual->num_documento) {
-            $is_unique = '';
-        }
-        else {
-            $is_unique = "|is_unique[estudiantes.num_documento]";
+    //     //validacion del formulario
+    //     $validation = \Config\Services::validation();
+
+    //     $validation -> setRules([
+    //         'nombres' => 'required',
+    //         'tipoDocumento' => 'required',
+    //         'num_documento' => 'required',
+    //         'genero' => 'required',
+    //         'grupoSanguineo' => 'required',
+    //         'fecha_nacimiento' => 'required',
+    //         'email' => 'required',
+    //         'celular' => 'required',
+    //         'direccion' => 'required',
+    //         'acudiente' => 'required',
+    //         'username' => 'required',
+    //         'password' => 'required',
+
+    //     ]);
+      
+
+    //     if ($validation->withRequest($this->request)->run())
+    //     {
+    //         $data = [
+    //                 'username' => $username,
+    //                 'password' => sha1($password),
+    //                 'dia_ingreso' => $fechaIngreso,
+    //                 'rol_id' => "4" ,
+    //                 'estado' => "1"                 
+    //             ];
+
+    //             if ($alumnosModel->saveUsuario($data)) {
+    //             $idUsuario = $alumnosModel->insertID();
+    //             $this->saveEstudiante($idUsuario,$tipoDocumento,$num_documento,$nombres,$fecha_nacimiento,$genero,$email,$celular,$direccion,$grupoSanguineo,$acudiente);
+    //             session()->setFlashdata("Registrado","La información se guardo exitosamente");
+    //             return redirect()->to(base_url()."registrar/alumnos");
+    //         }
+    //         else {
+    //             //session()->setFlashdata("Error","No se pudo guardar la informacion");
+    //             //si la validacion falla, vuelve a la vista de agregar con errores
+    //             return redirect()->back()->withInput()->with('validation', $validation);
+    //         }
+    //     }
+    //     else {
+    //         $this->add();
+    //     }       
+    // }
+
+    // protected function saveEstudiante($idUsuario,$tipoDocumento,$num_documento,$nombres,$fecha_nacimiento,$genero,$email,$celular,$direccion,$grupoSanguineo,$acudiente)
+    // { 
+    //     $alumnosModel = new Alumnos_model();
+
+    //     $data  = [
+    //             'tipodocumento_id' => $tipoDocumento,
+    //             'num_documento' => $num_documento,
+    //             'nombres' => $nombres, 
+    //             'fecha_nacimiento' => $fecha_nacimiento,
+    //             'genero_id' => $genero,
+    //             'email' => $email,
+    //             'celular' => $celular,
+    //             'direccion' => $direccion,
+    //             'gruposanguineo_id' => $grupoSanguineo,
+    //             'estado' => "1" ,
+    //             'acudiente_id' => $acudiente,
+    //             'usuario_id' => $idUsuario,
+    //     ];
+    //     $alumnosModel->save($data); 
+    // }
+   
+    // public function edit($id)
+    // {
+    //     $alumnosModel = new Alumnos_model();
+
+	// 	$data  = [
+    //         'alumno' => $this-> $alumnosModel->getAlumno($id),
+    //         'genero' => $this-> $alumnosModel->getGeneros(),
+    //         'tipoDocumento' => $this-> $alumnosModel->getTipoDocumentos(),
+    //         'acudiente' => $this-> $alumnosModel->getAcudientes(),
+    //         'grupoSanguineo' => $this-> $alumnosModel->getGrupoSanguineo(),
+    //     ];
+        
+	// 	echo view("layouts/header");
+	// 	echo view("layouts/aside",$data);
+	// 	echo view("admin/alumnos/edit",$data);
+	// 	echo view("layouts/footer");
+    // }
+
+    // public function update()
+    // {
+    //     $alumnosModel = new Alumnos_model();
+
+    //     $idAlumno = $this->request->getPost("idAlumno");
+    //     $idUsuario = $this->request->getPost("idUsuario");
+    //     $nombres = $this->request->getPost("nombres");
+	// 	$tipoDocumento = $this->request->getPost("tipoDocumento");
+	// 	$num_documento = $this->request->getPost("num_documento");
+    //     $genero = $this->request->getPost("genero");
+    //     $grupoSanguineo = $this->request->getPost("grupoSanguineo");
+    //     $fecha_nacimiento = $this->request->getPost("fecha_nacimiento");
+    //     $email = $this->request->getPost("email");
+    //     $celular = $this->request->getPost("celular");
+    //     $direccion = $this->request->getPost("direccion");
+    //     $acudiente = $this->request->getPost("acudiente");
+
+    //     $username = $this->request->getPost("username");
+    //     $password = $this->request->getPost("password");
+    //     $fechaIngreso = $this->request->getPost("fechaIngreso");
+
+    //     $alumnoActual = $alumnosModel->getAlumno($idAlumno);
+
+    //     $validation=[
+    //         'nombres' => 'required',
+    //         'tipoDocumento' => 'required',
+    //         'genero' => 'required',
+    //         'grupoSanguineo' => 'required',
+    //         'fecha_nacimiento' => 'required',
+    //         'celular' => 'required',
+    //         'direccion' => 'required',
+    //         'acudiente' => 'required',
+    //         'password' => 'required',
+
+    //     ];
+        
+    //     if ($num_documento != $alumnoActual['num_documento']) {
+    //         $validationRules['num_documento'] = 'required|is_unique[estudiantes.num_documento]';
+    //     }
+    //     if ($email != $alumnoActual['email']) {
+    //         $validationRules['email'] = 'required|is_unique[estudiantes.email]';
+    //     }
+    //     if ($username != $alumnoActual['username']) {
+    //         $validationRules['username'] = 'required|is_unique[estudiantes.username]';
+    //     }
+    //     if ($this->validate($validationRules)) {
+    //         $alumno = [
+    //             'username' => $username,
+    //             'password' => password_hash($password, PASSWORD_DEFAULT),
+                
+    //         ];
+
+    //         if ($alumnosModel->updateUsuario($idUsuario, $dataUsuario)) {
+    //             $this->updateEstudiante($idAlumno, $tipoDocumento, $num_documento, $nombres, $fecha_nacimiento, $genero, $email, $celular, $direccion, $grupoSanguineo, $acudiente);
+    //             session()->setFlashdata('Actualizado', 'La información se actualizó exitosamente');
+    //             return redirect()->to(base_url('registrar/alumnos'));
+                
+    //         }else {
+    //             session()->setFlashdata('Error', 'No se pudo actualizar la información');
+    //             return redirect()->to(base_url('registrar/alumnos', $idAlumno));
+    //         }
+    //     }
+    // }
+
+    // private function updateEstudiante($idAlumno,$tipoDocumento,$num_documento,$nombres,$fecha_nacimiento,$genero,$email,$celular,$direccion,$grupoSanguineo,$acudiente)
+    // { 
+    //     $alumnosModel = new Alumnos_model();
+
+    //     $data  = [
+    //         'tipodocumento_id' => $tipoDocumento,
+    //         'num_documento' => $num_documento,
+    //         'nombres' => $nombres, 
+    //         'fecha_nacimiento' => $fecha_nacimiento,
+    //         'genero_id' => $genero,
+    //         'email' => $email,
+    //         'celular' => $celular,
+    //         'direccion' => $direccion,
+    //         'gruposanguineo_id' => $grupoSanguineo,
+    //         'acudiente_id' => $acudiente                
+        
+    //     ];
+
             
-        }
-        $this->form_validation->set_rules("genero","Seleccionar Genero","required");
-        $this->form_validation->set_rules("grupoSanguineo","Seleccionar Grupo Sanguineo","required");
-        $this->form_validation->set_rules("fecha_nacimiento","Fecha Nacimiento","required");
-        if ($email == $alumnoActual->email) {
-            $is_unique = '';
-        }
-        else {
-            $is_unique = "|is_unique[estudiantes.email]";
-        }
-        $this->form_validation->set_rules("celular","Celular","required");
-        $this->form_validation->set_rules("direccion","Direccion","required");
-        $this->form_validation->set_rules("acudiente","Seleccionar Acudiente","required");
-        if ($username == $alumnoActual->usuario) {
-            $is_unique = '';
-        }
-        else {
-            $is_unique = "|is_unique[estudiantes.usuario]";
-        }
-        $this->form_validation->set_rules("password","Password","required");
 
-        if ($this->form_validation->run())
-        {
-            $data = array(
-                'username' => $username,
-                'password' => sha1($password),  
-            );
-    
-            if ($this->Alumnos_model->updateUsuario($idUsuario,$data)) {
-                $this->updateEstudiante($idAlumno,$tipoDocumento,$num_documento,$nombres,$fecha_nacimiento,$genero,$email,$celular,$direccion,$grupoSanguineo,$acudiente);
-                $this->session->set_flashdata("Actualizado","La información se actualizo exitosamente");
-                redirect(base_url()."registrar/alumnos");
-            }
-            else{
-                $this->session->set_flashdata("Error","No se pudo actualizar la informacion");
-                redirect(base_url()."registrar/alumnos/edit/".$idAlumno);
-            }
-        }
-        else {
-            $this->edit($idAlumno);
-        }		
-    }
+    //     $alumnosModel->updateEstudiante($idAlumno,$data); 
+    // }
 
-    protected function updateEstudiante($idAlumno,$tipoDocumento,$num_documento,$nombres,$fecha_nacimiento,$genero,$email,$celular,$direccion,$grupoSanguineo,$acudiente)
-    { 
-        $data  = array(
+    // public function delete($id)
+    // {
+    //     $alumnosModel = new Alumnos_model();
 
-            'tipodocumento_id' => $tipoDocumento,
-            'num_documento' => $num_documento,
-            'nombres' => $nombres, 
-            'fecha_nacimiento' => $fecha_nacimiento,
-            'genero_id' => $genero,
-            'email' => $email,
-            'celular' => $celular,
-            'direccion' => $direccion,
-            'gruposanguineo_id' => $grupoSanguineo,
-            'acudiente_id' => $acudiente                
-        );
-
-        $this->Alumnos_model->updateEstudiante($idAlumno,$data); 
-    }
-
-    public function delete($id)
-    {
-        $data = array(
-            'estado' => "0" ,
-        );
+    //     $data = [
+    //         'estado' => "0" ,
+    //     ];
          
-        $this->Alumnos_model->updateEstudiante($id,$data);
-        echo "registrar/alumnos";
-    } 
+    //     $alumnosModel->updateEstudiante($id,$data);
+    //     echo "registrar/alumnos";
+    // } 
 
-    public function disable($usuario_id)
-    {
-        $data = array(
-            'estado' => "0" ,
-        );
+    // public function disable($usuario_id)
+    // {
+    //     $alumnosModel = new Alumnos_model();
+
+    //     $data = [
+    //         'estado' => "0" ,
+    //     ];
          
-        $this->Alumnos_model->updateUsuario($usuario_id,$data);
-        echo "registrar/alumnos";
-    } 
+    //     $alumnosModel->updateUsuario($usuario_id,$data);
+    //     echo "registrar/alumnos";
+    // } 
 }
