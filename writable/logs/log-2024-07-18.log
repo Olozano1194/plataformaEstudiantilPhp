@@ -1,0 +1,506 @@
+INFO - 2024-07-18 03:55:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-18 04:15:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-18 04:15:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-18 04:16:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-18 04:16:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-18 04:16:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-18 04:17:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-18 05:15:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-18 05:47:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-18 05:47:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-18 05:47:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-18 05:49:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-18 05:50:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-18 05:50:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-18 05:54:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-18 05:54:34 --> TypeError: CodeIgniter\Database\BaseBuilder::setBind(): Argument #1 ($key) must be of type string, int given, called in C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\BaseBuilder.php on line 1562
+[Method: POST, Route: registrar/alumnos/store]
+in SYSTEMPATH\Database\BaseBuilder.php on line 3499.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1562): CodeIgniter\Database\BaseBuilder->setBind(0, 'Eduardo Lozano', true)
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2311): CodeIgniter\Database\BaseBuilder->set([...], '', true)
+ 3 APPPATH\Models\Alumnos_model.php(86): CodeIgniter\Database\BaseBuilder->insert([...])
+ 4 APPPATH\Controllers\registrar\Alumnos.php(117): App\Models\Alumnos_model->saveEstudiante([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->store()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-18 06:00:56 --> mysqli_sql_exception: Duplicate entry 'Eduard1194' for key 'usuarios.username_UNIQUE' in C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\plataforma_estudiantil_dos\app\Models\Alumnos_model.php(66): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\plataforma_estudiantil_dos\app\Controllers\registrar\Alumnos.php(86): App\Models\Alumnos_model->saveUsuario(Array)
+#6 C:\xampp\htdocs\plataforma_estudiantil_dos\system\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->store()
+#7 C:\xampp\htdocs\plataforma_estudiantil_dos\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+#8 C:\xampp\htdocs\plataforma_estudiantil_dos\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\plataforma_estudiantil_dos\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-07-18 06:00:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'Eduard1194' for key 'usuarios.username_UNIQUE'
+[Method: POST, Route: registrar/alumnos/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`username`, `password`, `dia_ingreso`, `rol_id`, `estado`) VALUES (:username:, :password:, :dia_ingreso:, :rol_id:, :estado:)', [...], false)
+ 2 APPPATH\Models\Alumnos_model.php(66): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\registrar\Alumnos.php(86): App\Models\Alumnos_model->saveUsuario([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->store()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 06:00:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'Eduard1194' for key 'usuarios.username_UNIQUE'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuarios` (`username`, `password`, `dia_ingreso`, `rol_id`, `estado`) VALUES (\'Eduard1194\', \'40bd001563085fc35165329ea1ff5c5ecbdbbeef\', \'2024-07-18\', \'4\', \'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuarios` (`username`, `password`, `dia_ingreso`, `rol_id`, `estado`) VALUES (\'Eduard1194\', \'40bd001563085fc35165329ea1ff5c5ecbdbbeef\', \'2024-07-18\', \'4\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`username`, `password`, `dia_ingreso`, `rol_id`, `estado`) VALUES (:username:, :password:, :dia_ingreso:, :rol_id:, :estado:)', [...], false)
+ 4 APPPATH\Models\Alumnos_model.php(66): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\registrar\Alumnos.php(86): App\Models\Alumnos_model->saveUsuario([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->store()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 06:00:56 --> [Caused by] mysqli_sql_exception: Duplicate entry 'Eduard1194' for key 'usuarios.username_UNIQUE'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `usuarios` (`username`, `password`, `dia_ingreso`, `rol_id`, `estado`) VALUES (\'Eduard1194\', \'40bd001563085fc35165329ea1ff5c5ecbdbbeef\', \'2024-07-18\', \'4\', \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuarios` (`username`, `password`, `dia_ingreso`, `rol_id`, `estado`) VALUES (\'Eduard1194\', \'40bd001563085fc35165329ea1ff5c5ecbdbbeef\', \'2024-07-18\', \'4\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuarios` (`username`, `password`, `dia_ingreso`, `rol_id`, `estado`) VALUES (\'Eduard1194\', \'40bd001563085fc35165329ea1ff5c5ecbdbbeef\', \'2024-07-18\', \'4\', \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`username`, `password`, `dia_ingreso`, `rol_id`, `estado`) VALUES (:username:, :password:, :dia_ingreso:, :rol_id:, :estado:)', [...], false)
+ 5 APPPATH\Models\Alumnos_model.php(66): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\registrar\Alumnos.php(86): App\Models\Alumnos_model->saveUsuario([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->store()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-18 06:01:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-18 06:01:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-18 06:01:34 --> TypeError: CodeIgniter\Database\BaseBuilder::setBind(): Argument #1 ($key) must be of type string, int given, called in C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\BaseBuilder.php on line 1562
+[Method: POST, Route: registrar/alumnos/store]
+in SYSTEMPATH\Database\BaseBuilder.php on line 3499.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1562): CodeIgniter\Database\BaseBuilder->setBind(0, 'Eduardo Lozano', true)
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2311): CodeIgniter\Database\BaseBuilder->set([...], '', true)
+ 3 APPPATH\Models\Alumnos_model.php(86): CodeIgniter\Database\BaseBuilder->insert([...])
+ 4 APPPATH\Controllers\registrar\Alumnos.php(117): App\Models\Alumnos_model->saveEstudiante([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->store()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-18 06:07:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-18 06:08:31 --> mysqli_sql_exception: Unknown column 'tipoDocumento' in 'field list' in C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `es...', 0)
+#1 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `es...')
+#2 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `es...')
+#3 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `es...', Array, false)
+#4 C:\xampp\htdocs\plataforma_estudiantil_dos\app\Models\Alumnos_model.php(86): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\plataforma_estudiantil_dos\app\Controllers\registrar\Alumnos.php(114): App\Models\Alumnos_model->saveEstudiante(Array)
+#6 C:\xampp\htdocs\plataforma_estudiantil_dos\system\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->store()
+#7 C:\xampp\htdocs\plataforma_estudiantil_dos\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+#8 C:\xampp\htdocs\plataforma_estudiantil_dos\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\plataforma_estudiantil_dos\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-07-18 06:08:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tipoDocumento' in 'field list'
+[Method: POST, Route: registrar/alumnos/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `estudiantes` (`tipoDocumento`, `num_documento`, `nombres`, `fecha_nacimiento`, `genero`, `email`, `celular`, `direccion`, `grupoSanguineo`, `acudiente`, `usuario_id`, `estado`) VALUES (:tipoDocumento:, :num_documento:, :nombres:, :fecha_nacimiento:, :genero:, :email:, :celular:, :direccion:, :grupoSanguineo:, :acudiente:, :usuario_id:, :estado:)', [...], false)
+ 2 APPPATH\Models\Alumnos_model.php(86): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\registrar\Alumnos.php(114): App\Models\Alumnos_model->saveEstudiante([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->store()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 06:08:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tipoDocumento' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `estudiantes` (`tipoDocumento`, `num_documento`, `nombres`, `fecha_nacimiento`, `genero`, `email`, `celular`, `direccion`, `grupoSanguineo`, `acudiente`, `usuario_id`, `estado`) VALUES (\'3\', \'9787984125\', \'Eduardo Lozano\', \'1994-11-16\', \'1\', \'Eduard1194@gmail.com\', \'3213213215\', \'calle falsa 123\', \'2\', \'3\', 38, \'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `estudiantes` (`tipoDocumento`, `num_documento`, `nombres`, `fecha_nacimiento`, `genero`, `email`, `celular`, `direccion`, `grupoSanguineo`, `acudiente`, `usuario_id`, `estado`) VALUES (\'3\', \'9787984125\', \'Eduardo Lozano\', \'1994-11-16\', \'1\', \'Eduard1194@gmail.com\', \'3213213215\', \'calle falsa 123\', \'2\', \'3\', 38, \'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `estudiantes` (`tipoDocumento`, `num_documento`, `nombres`, `fecha_nacimiento`, `genero`, `email`, `celular`, `direccion`, `grupoSanguineo`, `acudiente`, `usuario_id`, `estado`) VALUES (:tipoDocumento:, :num_documento:, :nombres:, :fecha_nacimiento:, :genero:, :email:, :celular:, :direccion:, :grupoSanguineo:, :acudiente:, :usuario_id:, :estado:)', [...], false)
+ 4 APPPATH\Models\Alumnos_model.php(86): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\registrar\Alumnos.php(114): App\Models\Alumnos_model->saveEstudiante([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->store()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 06:08:31 --> [Caused by] mysqli_sql_exception: Unknown column 'tipoDocumento' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `estudiantes` (`tipoDocumento`, `num_documento`, `nombres`, `fecha_nacimiento`, `genero`, `email`, `celular`, `direccion`, `grupoSanguineo`, `acudiente`, `usuario_id`, `estado`) VALUES (\'3\', \'9787984125\', \'Eduardo Lozano\', \'1994-11-16\', \'1\', \'Eduard1194@gmail.com\', \'3213213215\', \'calle falsa 123\', \'2\', \'3\', 38, \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `estudiantes` (`tipoDocumento`, `num_documento`, `nombres`, `fecha_nacimiento`, `genero`, `email`, `celular`, `direccion`, `grupoSanguineo`, `acudiente`, `usuario_id`, `estado`) VALUES (\'3\', \'9787984125\', \'Eduardo Lozano\', \'1994-11-16\', \'1\', \'Eduard1194@gmail.com\', \'3213213215\', \'calle falsa 123\', \'2\', \'3\', 38, \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `estudiantes` (`tipoDocumento`, `num_documento`, `nombres`, `fecha_nacimiento`, `genero`, `email`, `celular`, `direccion`, `grupoSanguineo`, `acudiente`, `usuario_id`, `estado`) VALUES (\'3\', \'9787984125\', \'Eduardo Lozano\', \'1994-11-16\', \'1\', \'Eduard1194@gmail.com\', \'3213213215\', \'calle falsa 123\', \'2\', \'3\', 38, \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `estudiantes` (`tipoDocumento`, `num_documento`, `nombres`, `fecha_nacimiento`, `genero`, `email`, `celular`, `direccion`, `grupoSanguineo`, `acudiente`, `usuario_id`, `estado`) VALUES (:tipoDocumento:, :num_documento:, :nombres:, :fecha_nacimiento:, :genero:, :email:, :celular:, :direccion:, :grupoSanguineo:, :acudiente:, :usuario_id:, :estado:)', [...], false)
+ 5 APPPATH\Models\Alumnos_model.php(86): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\registrar\Alumnos.php(114): App\Models\Alumnos_model->saveEstudiante([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->store()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-18 06:35:22 --> mysqli_sql_exception: Duplicate entry 'asd' for key 'usuarios.username_UNIQUE' in C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\plataforma_estudiantil_dos\app\Models\Alumnos_model.php(66): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\plataforma_estudiantil_dos\app\Controllers\registrar\Alumnos.php(97): App\Models\Alumnos_model->saveUsuario(Array)
+#6 C:\xampp\htdocs\plataforma_estudiantil_dos\system\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->store()
+#7 C:\xampp\htdocs\plataforma_estudiantil_dos\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+#8 C:\xampp\htdocs\plataforma_estudiantil_dos\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\plataforma_estudiantil_dos\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-07-18 06:35:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'asd' for key 'usuarios.username_UNIQUE'
+[Method: POST, Route: registrar/alumnos/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`username`, `password`, `dia_ingreso`, `rol_id`, `estado`) VALUES (:username:, :password:, :dia_ingreso:, :rol_id:, :estado:)', [...], false)
+ 2 APPPATH\Models\Alumnos_model.php(66): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\registrar\Alumnos.php(97): App\Models\Alumnos_model->saveUsuario([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->store()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 06:35:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'asd' for key 'usuarios.username_UNIQUE'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuarios` (`username`, `password`, `dia_ingreso`, `rol_id`, `estado`) VALUES (\'asd\', \'40bd001563085fc35165329ea1ff5c5ecbdbbeef\', \'2024-07-18\', \'4\', \'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuarios` (`username`, `password`, `dia_ingreso`, `rol_id`, `estado`) VALUES (\'asd\', \'40bd001563085fc35165329ea1ff5c5ecbdbbeef\', \'2024-07-18\', \'4\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`username`, `password`, `dia_ingreso`, `rol_id`, `estado`) VALUES (:username:, :password:, :dia_ingreso:, :rol_id:, :estado:)', [...], false)
+ 4 APPPATH\Models\Alumnos_model.php(66): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\registrar\Alumnos.php(97): App\Models\Alumnos_model->saveUsuario([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->store()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 06:35:22 --> [Caused by] mysqli_sql_exception: Duplicate entry 'asd' for key 'usuarios.username_UNIQUE'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `usuarios` (`username`, `password`, `dia_ingreso`, `rol_id`, `estado`) VALUES (\'asd\', \'40bd001563085fc35165329ea1ff5c5ecbdbbeef\', \'2024-07-18\', \'4\', \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuarios` (`username`, `password`, `dia_ingreso`, `rol_id`, `estado`) VALUES (\'asd\', \'40bd001563085fc35165329ea1ff5c5ecbdbbeef\', \'2024-07-18\', \'4\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuarios` (`username`, `password`, `dia_ingreso`, `rol_id`, `estado`) VALUES (\'asd\', \'40bd001563085fc35165329ea1ff5c5ecbdbbeef\', \'2024-07-18\', \'4\', \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`username`, `password`, `dia_ingreso`, `rol_id`, `estado`) VALUES (:username:, :password:, :dia_ingreso:, :rol_id:, :estado:)', [...], false)
+ 5 APPPATH\Models\Alumnos_model.php(66): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\registrar\Alumnos.php(97): App\Models\Alumnos_model->saveUsuario([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->store()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-18 06:35:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-18 06:35:56 --> mysqli_sql_exception: Unknown column 'tipoDocumento' in 'field list' in C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `es...', 0)
+#1 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `es...')
+#2 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `es...')
+#3 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `es...', Array, false)
+#4 C:\xampp\htdocs\plataforma_estudiantil_dos\app\Models\Alumnos_model.php(86): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\plataforma_estudiantil_dos\app\Controllers\registrar\Alumnos.php(114): App\Models\Alumnos_model->saveEstudiante(Array)
+#6 C:\xampp\htdocs\plataforma_estudiantil_dos\system\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->store()
+#7 C:\xampp\htdocs\plataforma_estudiantil_dos\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+#8 C:\xampp\htdocs\plataforma_estudiantil_dos\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\plataforma_estudiantil_dos\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-07-18 06:35:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tipoDocumento' in 'field list'
+[Method: POST, Route: registrar/alumnos/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `estudiantes` (`tipoDocumento`, `num_documento`, `nombres`, `fecha_nacimiento`, `genero`, `email`, `celular`, `direccion`, `grupoSanguineo`, `acudiente`, `usuario_id`, `estado`) VALUES (:tipoDocumento:, :num_documento:, :nombres:, :fecha_nacimiento:, :genero:, :email:, :celular:, :direccion:, :grupoSanguineo:, :acudiente:, :usuario_id:, :estado:)', [...], false)
+ 2 APPPATH\Models\Alumnos_model.php(86): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\registrar\Alumnos.php(114): App\Models\Alumnos_model->saveEstudiante([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->store()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 06:35:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tipoDocumento' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `estudiantes` (`tipoDocumento`, `num_documento`, `nombres`, `fecha_nacimiento`, `genero`, `email`, `celular`, `direccion`, `grupoSanguineo`, `acudiente`, `usuario_id`, `estado`) VALUES (NULL, \'9787984125\', \'Eduardo Lozano\', \'1994-11-16\', NULL, \'Eduard1194@gmail.com\', \'3213213215\', \'calle falsa 123\', NULL, NULL, 40, \'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `estudiantes` (`tipoDocumento`, `num_documento`, `nombres`, `fecha_nacimiento`, `genero`, `email`, `celular`, `direccion`, `grupoSanguineo`, `acudiente`, `usuario_id`, `estado`) VALUES (NULL, \'9787984125\', \'Eduardo Lozano\', \'1994-11-16\', NULL, \'Eduard1194@gmail.com\', \'3213213215\', \'calle falsa 123\', NULL, NULL, 40, \'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `estudiantes` (`tipoDocumento`, `num_documento`, `nombres`, `fecha_nacimiento`, `genero`, `email`, `celular`, `direccion`, `grupoSanguineo`, `acudiente`, `usuario_id`, `estado`) VALUES (:tipoDocumento:, :num_documento:, :nombres:, :fecha_nacimiento:, :genero:, :email:, :celular:, :direccion:, :grupoSanguineo:, :acudiente:, :usuario_id:, :estado:)', [...], false)
+ 4 APPPATH\Models\Alumnos_model.php(86): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\registrar\Alumnos.php(114): App\Models\Alumnos_model->saveEstudiante([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->store()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 06:35:56 --> [Caused by] mysqli_sql_exception: Unknown column 'tipoDocumento' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `estudiantes` (`tipoDocumento`, `num_documento`, `nombres`, `fecha_nacimiento`, `genero`, `email`, `celular`, `direccion`, `grupoSanguineo`, `acudiente`, `usuario_id`, `estado`) VALUES (NULL, \'9787984125\', \'Eduardo Lozano\', \'1994-11-16\', NULL, \'Eduard1194@gmail.com\', \'3213213215\', \'calle falsa 123\', NULL, NULL, 40, \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `estudiantes` (`tipoDocumento`, `num_documento`, `nombres`, `fecha_nacimiento`, `genero`, `email`, `celular`, `direccion`, `grupoSanguineo`, `acudiente`, `usuario_id`, `estado`) VALUES (NULL, \'9787984125\', \'Eduardo Lozano\', \'1994-11-16\', NULL, \'Eduard1194@gmail.com\', \'3213213215\', \'calle falsa 123\', NULL, NULL, 40, \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `estudiantes` (`tipoDocumento`, `num_documento`, `nombres`, `fecha_nacimiento`, `genero`, `email`, `celular`, `direccion`, `grupoSanguineo`, `acudiente`, `usuario_id`, `estado`) VALUES (NULL, \'9787984125\', \'Eduardo Lozano\', \'1994-11-16\', NULL, \'Eduard1194@gmail.com\', \'3213213215\', \'calle falsa 123\', NULL, NULL, 40, \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `estudiantes` (`tipoDocumento`, `num_documento`, `nombres`, `fecha_nacimiento`, `genero`, `email`, `celular`, `direccion`, `grupoSanguineo`, `acudiente`, `usuario_id`, `estado`) VALUES (:tipoDocumento:, :num_documento:, :nombres:, :fecha_nacimiento:, :genero:, :email:, :celular:, :direccion:, :grupoSanguineo:, :acudiente:, :usuario_id:, :estado:)', [...], false)
+ 5 APPPATH\Models\Alumnos_model.php(86): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\registrar\Alumnos.php(114): App\Models\Alumnos_model->saveEstudiante([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->store()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-18 06:45:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-18 06:46:32 --> mysqli_sql_exception: Unknown column 'tipoDocumento' in 'field list' in C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `es...', 0)
+#1 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `es...')
+#2 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `es...')
+#3 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `es...', Array, false)
+#4 C:\xampp\htdocs\plataforma_estudiantil_dos\app\Models\Alumnos_model.php(86): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\plataforma_estudiantil_dos\app\Controllers\registrar\Alumnos.php(114): App\Models\Alumnos_model->saveEstudiante(Array)
+#6 C:\xampp\htdocs\plataforma_estudiantil_dos\system\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->store()
+#7 C:\xampp\htdocs\plataforma_estudiantil_dos\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+#8 C:\xampp\htdocs\plataforma_estudiantil_dos\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\plataforma_estudiantil_dos\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-07-18 06:46:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tipoDocumento' in 'field list'
+[Method: POST, Route: registrar/alumnos/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `estudiantes` (`tipoDocumento`, `num_documento`, `nombres`, `fecha_nacimiento`, `genero`, `email`, `celular`, `direccion`, `grupoSanguineo`, `acudiente`, `usuario_id`, `estado`) VALUES (:tipoDocumento:, :num_documento:, :nombres:, :fecha_nacimiento:, :genero:, :email:, :celular:, :direccion:, :grupoSanguineo:, :acudiente:, :usuario_id:, :estado:)', [...], false)
+ 2 APPPATH\Models\Alumnos_model.php(86): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\registrar\Alumnos.php(114): App\Models\Alumnos_model->saveEstudiante([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->store()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 06:46:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tipoDocumento' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `estudiantes` (`tipoDocumento`, `num_documento`, `nombres`, `fecha_nacimiento`, `genero`, `email`, `celular`, `direccion`, `grupoSanguineo`, `acudiente`, `usuario_id`, `estado`) VALUES (\'1\', \'9787984125\', \'Eduardo Lozano\', \'2222-12-12\', \'2\', \'ddf@df.g\', \'3213213215\', \'calle falsa 123\', \'1\', \'3\', 41, \'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `estudiantes` (`tipoDocumento`, `num_documento`, `nombres`, `fecha_nacimiento`, `genero`, `email`, `celular`, `direccion`, `grupoSanguineo`, `acudiente`, `usuario_id`, `estado`) VALUES (\'1\', \'9787984125\', \'Eduardo Lozano\', \'2222-12-12\', \'2\', \'ddf@df.g\', \'3213213215\', \'calle falsa 123\', \'1\', \'3\', 41, \'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `estudiantes` (`tipoDocumento`, `num_documento`, `nombres`, `fecha_nacimiento`, `genero`, `email`, `celular`, `direccion`, `grupoSanguineo`, `acudiente`, `usuario_id`, `estado`) VALUES (:tipoDocumento:, :num_documento:, :nombres:, :fecha_nacimiento:, :genero:, :email:, :celular:, :direccion:, :grupoSanguineo:, :acudiente:, :usuario_id:, :estado:)', [...], false)
+ 4 APPPATH\Models\Alumnos_model.php(86): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\registrar\Alumnos.php(114): App\Models\Alumnos_model->saveEstudiante([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->store()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 06:46:32 --> [Caused by] mysqli_sql_exception: Unknown column 'tipoDocumento' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `estudiantes` (`tipoDocumento`, `num_documento`, `nombres`, `fecha_nacimiento`, `genero`, `email`, `celular`, `direccion`, `grupoSanguineo`, `acudiente`, `usuario_id`, `estado`) VALUES (\'1\', \'9787984125\', \'Eduardo Lozano\', \'2222-12-12\', \'2\', \'ddf@df.g\', \'3213213215\', \'calle falsa 123\', \'1\', \'3\', 41, \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `estudiantes` (`tipoDocumento`, `num_documento`, `nombres`, `fecha_nacimiento`, `genero`, `email`, `celular`, `direccion`, `grupoSanguineo`, `acudiente`, `usuario_id`, `estado`) VALUES (\'1\', \'9787984125\', \'Eduardo Lozano\', \'2222-12-12\', \'2\', \'ddf@df.g\', \'3213213215\', \'calle falsa 123\', \'1\', \'3\', 41, \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `estudiantes` (`tipoDocumento`, `num_documento`, `nombres`, `fecha_nacimiento`, `genero`, `email`, `celular`, `direccion`, `grupoSanguineo`, `acudiente`, `usuario_id`, `estado`) VALUES (\'1\', \'9787984125\', \'Eduardo Lozano\', \'2222-12-12\', \'2\', \'ddf@df.g\', \'3213213215\', \'calle falsa 123\', \'1\', \'3\', 41, \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `estudiantes` (`tipoDocumento`, `num_documento`, `nombres`, `fecha_nacimiento`, `genero`, `email`, `celular`, `direccion`, `grupoSanguineo`, `acudiente`, `usuario_id`, `estado`) VALUES (:tipoDocumento:, :num_documento:, :nombres:, :fecha_nacimiento:, :genero:, :email:, :celular:, :direccion:, :grupoSanguineo:, :acudiente:, :usuario_id:, :estado:)', [...], false)
+ 5 APPPATH\Models\Alumnos_model.php(86): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\registrar\Alumnos.php(114): App\Models\Alumnos_model->saveEstudiante([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->store()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-18 07:40:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-18 07:43:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-18 07:47:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-18 07:48:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-18 07:48:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-18 08:53:12 --> ParseError: syntax error, unexpected token "echo"
+[Method: GET, Route: registrar/alumnos/add]
+in APPPATH\Controllers\registrar\Alumnos.php on line 23.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Controllers\\Registrar\\Alumnos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Registrar\\Alumnos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Registrar\\Alumnos')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Registrar\\Alumnos', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 08:55:27 --> ParseError: syntax error, unexpected token "echo"
+[Method: GET, Route: registrar/alumnos/add]
+in APPPATH\Controllers\registrar\Alumnos.php on line 22.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Controllers\\Registrar\\Alumnos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Registrar\\Alumnos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Registrar\\Alumnos')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Registrar\\Alumnos', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-18 08:57:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-18 08:57:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-18 08:59:53 --> Error: Class "App\Controllers\Controller" not found
+[Method: GET, Route: registrar/alumnos]
+in APPPATH\Controllers\registrar\Alumnos.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Controllers\\Registrar\\Alumnos.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Registrar\\Alumnos')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Registrar\\Alumnos')
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Registrar\\Alumnos', true)
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 09:10:06 --> Error: Class "App\Controllers\Registrar\BaseController" not found
+[Method: GET, Route: registrar/alumnos]
+in APPPATH\Controllers\registrar\Alumnos.php on line 6.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Controllers\\Registrar\\Alumnos.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Registrar\\Alumnos')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Registrar\\Alumnos')
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Registrar\\Alumnos', true)
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-18 09:10:21 --> Error: Class "App\Controllers\Registrar\Controller" not found
+[Method: GET, Route: registrar/alumnos]
+in APPPATH\Controllers\registrar\Alumnos.php on line 6.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Controllers\\Registrar\\Alumnos.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Registrar\\Alumnos')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Registrar\\Alumnos')
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Registrar\\Alumnos', true)
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-18 09:10:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-18 09:12:02 --> ErrorException: Undefined variable $alumnosModel
+[Method: GET, Route: registrar/alumnos/add]
+in APPPATH\Controllers\registrar\Alumnos.php on line 34.
+ 1 APPPATH\Controllers\registrar\Alumnos.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $alumnosModel', 'C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Controllers\\registrar\\Alumnos.php', 34)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->add()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-18 09:12:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-18 09:12:38 --> Error: Call to undefined function set_value()
+[Method: GET, Route: registrar/alumnos/add]
+in APPPATH\Views\admin\alumnos\add.php on line 30.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/add', [], true)
+ 4 APPPATH\Controllers\registrar\Alumnos.php(44): view('admin/alumnos/add', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->add()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-18 09:15:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-18 09:15:21 --> Error: Call to undefined function set_select()
+[Method: GET, Route: registrar/alumnos/add]
+in APPPATH\Views\admin\alumnos\add.php on line 41.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/add', [], true)
+ 4 APPPATH\Controllers\registrar\Alumnos.php(44): view('admin/alumnos/add', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->add()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-18 09:18:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-18 09:18:52 --> ErrorException: Undefined variable $doc
+[Method: GET, Route: registrar/alumnos/add]
+in APPPATH\Views\admin\alumnos\add.php on line 41.
+ 1 APPPATH\Views\admin\alumnos\add.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $doc', 'C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\add.php', 41)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\add.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/add', [], true)
+ 5 APPPATH\Controllers\registrar\Alumnos.php(44): view('admin/alumnos/add', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->add()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-18 09:19:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-18 09:19:21 --> Error: Call to undefined function set_value()
+[Method: GET, Route: registrar/alumnos/add]
+in APPPATH\Views\admin\alumnos\add.php on line 49.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/add', [], true)
+ 4 APPPATH\Controllers\registrar\Alumnos.php(44): view('admin/alumnos/add', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->add()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-18 09:20:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-18 09:20:29 --> Error: Call to undefined function set_select()
+[Method: GET, Route: registrar/alumnos/add]
+in APPPATH\Views\admin\alumnos\add.php on line 60.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/add', [], true)
+ 4 APPPATH\Controllers\registrar\Alumnos.php(44): view('admin/alumnos/add', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->add()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-18 09:21:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-18 09:21:18 --> Error: Call to undefined function set_value()
+[Method: GET, Route: registrar/alumnos/add]
+in APPPATH\Views\admin\alumnos\add.php on line 81.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/add', [], true)
+ 4 APPPATH\Controllers\registrar\Alumnos.php(44): view('admin/alumnos/add', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->add()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-18 09:22:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-18 09:23:53 --> ErrorException: Undefined property: App\Controllers\Registrar\Alumnos::$Alumnos_model
+[Method: POST, Route: registrar/alumnos/store]
+in APPPATH\Controllers\registrar\Alumnos.php on line 93.
+ 1 APPPATH\Controllers\registrar\Alumnos.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Registrar\\Alumnos::$Alumnos_model', 'C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Controllers\\registrar\\Alumnos.php', 93)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->store()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-18 09:26:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-18 09:27:03 --> ErrorException: Undefined property: App\Controllers\Registrar\Alumnos::$session
+[Method: POST, Route: registrar/alumnos/store]
+in APPPATH\Controllers\registrar\Alumnos.php on line 101.
+ 1 APPPATH\Controllers\registrar\Alumnos.php(101): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Registrar\\Alumnos::$session', 'C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Controllers\\registrar\\Alumnos.php', 101)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->store()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-18 09:27:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-18 09:28:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

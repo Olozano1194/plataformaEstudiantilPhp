@@ -15,15 +15,17 @@
             <div class="box-body">
                 <div class="row">
                     <div class="col-md-12">
-                        <?php if($this->session->flashdata("Error")):?>
+                        <?php if(session()->getFlashdata("Error")):?>
                             <div class="alert alert-danger alert-dismissible">
                                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                                <p><i class="icon fa fa-ban"></i><?php echo $this->session->flashdata("Error"); ?></p>                                
+                                <p><i class="icon fa fa-ban"></i><?php echo session()->getFlashdata("Error"); ?></p>                                
                              </div>
                         <?php endif;?> 
+
                         <form action="<?php echo base_url();?>registrar/alumnos/update" method="POST" class="form-horizontal">
                             <input type="hidden" value="<?php echo $alumno->id;?>" name="idAlumno">
                             <input type="hidden" value="<?php echo $alumno->usuario_id;?>" name="idUsuario">
+
                             <div class="form-group">
                                 <div class="col-md-6 <?php echo form_error("nombres") !=false ? 'has-error':'';?>">
                                     <label for="nombres ">Nombre Completo:</label>
@@ -31,6 +33,7 @@
                                     <?php echo form_error("nombres","<span class='help-block'>","</span>");?>
                                 </div>   
                             </div>
+
                             <div class="form-group">
                                 <div class="col-md-4 <?php echo form_error("tipoDocumento") !=false ? 'has-error':'';?>">
                                     <label for="tipoDocumento">Tipo de Documento:</label>
@@ -54,6 +57,7 @@
                                     <?php echo form_error("num_documento","<span class='help-block'>","</span>");?>
                                 </div>    
                             </div>
+
                             <div class="form-group">
                                 <div class="col-md-4 <?php echo form_error("genero") !=false ? 'has-error':'';?>">
                                     <label for="genero">Genero:</label>
@@ -88,6 +92,7 @@
                                     <?php echo form_error("grupoSanguineo","<span class='help-block'>","</span>");?>
                                 </div>
                             </div>
+                            
                             <div class="form-group">
                                 <div class="col-md-4 <?php echo form_error("fecha_nacimiento") !=false ? 'has-error':'';?>">
                                     <label for="fecha_nacimiento">Fecha Nacimiento:</label>
@@ -95,6 +100,7 @@
                                     <?php echo form_error("fecha_nacimiento","<span class='help-block'>","</span>");?>
                                 </div>
                             </div>
+
                             <div class="form-group">
                                 <div class="col-md-4 <?php echo form_error("email") !=false ? 'has-error':'';?>">
                                     <label for="email">Email:</label>
@@ -107,6 +113,7 @@
                                     <?php echo form_error("celular","<span class='help-block'>","</span>");?>
                                 </div>
                             </div>
+
                             <div class="form-group">
                                 <div class="col-md-4 <?php echo form_error("direccion") !=false ? 'has-error':'';?>">
                                     <label for="direccion">Dirección:</label>
@@ -114,6 +121,7 @@
                                     <?php echo form_error("direccion","<span class='help-block'>","</span>");?>
                                 </div>
                             </div>
+
                             <div class="form-group">
                                 <div class="col-md-4 <?php echo form_error("foto") !=false ? 'has-error':'';?>">
                                     <label for="foto">Foto:</label>
@@ -121,6 +129,7 @@
                                     <?php echo form_error("foto","<span class='help-block'>","</span>");?>
                                 </div>
                             </div>
+
                             <div class="form-group">
                                 <div class="col-md-4 <?php echo form_error("acudiente") !=false ? 'has-error':'';?>">
                                     <label for="acudiente">Acudiente:</label>
@@ -139,6 +148,7 @@
                                     <?php echo form_error("acudiente","<span class='help-block'>","</span>");?>
                                 </div>
                             </div>
+
                             <div class="form-group">
                                 <div class="col-md-4 <?php echo form_error("username") !=false ? 'has-error':'';?>">
                                     <label for="username">Username:</label>
@@ -150,7 +160,8 @@
                                     <input type="password" class="form-control" id="password" name="password" value="<?php echo form_error("password") !=false ? set_value("password") : $alumno->contraseña;?>">
                                     <?php echo form_error("password","<span class='help-block'>","</span>");?>
                                 </div>
-                            </div>  
+                            </div>
+
                             <div class="form-group">
                                 <div class="col-md-12">
                                    <button type="submit" class="btn btn-success"><span class="fa fa-edit"></span> Actualizar</button>

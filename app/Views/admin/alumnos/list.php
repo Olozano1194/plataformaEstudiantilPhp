@@ -66,9 +66,9 @@
                                             <td>
                                                 <div class="btn-group">
 
-                                                    <a href="<?php echo base_url()?>registrar/alumnos/edit/<?php echo $alumnos->id;?>" title="Actualizar" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
-                                                    <a href="" title="Desactivar Usuario" class="btn btn-info btn-disable"><span class="fa fa-user-times"></span></a>
-                                                    <a href="" title="Eliminar" class="btn btn-danger btn-remove"><span class="fa fa-remove"></span></a>
+                                                    <a href="<?php echo base_url()?>registrar/alumnos/edit/<?php echo $alumno->id;?>" title="Actualizar" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
+                                                    <a href="<?php echo base_url();?>registrar/alumnos/disable/<?php echo $alumno->usuario_id;?>" title="Desactivar Usuario" class="btn btn-info btn-disable"><span class="fa fa-user-times"></span></a>
+                                                    <a href="<?php echo base_url();?>registrar/alumnos/delete/<?php echo $alumno->id;?>" title="Eliminar" class="btn btn-danger btn-remove"><span class="fa fa-remove"></span></a>
                                                 </div>
                                             </td>
                                         </tr>
