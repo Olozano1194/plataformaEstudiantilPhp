@@ -208,11 +208,11 @@ class Alumnos extends Controller {
                 $alumnosModel->updateEstudiante($idAlumno, $tipoDocumento, $num_documento, $nombres, $fecha_nacimiento, $genero, $email, $celular, $direccion, $grupoSanguineo, $acudiente);
     
                 // Mostrar mensaje de éxito y redirigir
-                $this->session->setFlashdata("success", "La información se actualizó exitosamente");
+                session()->setFlashdata("success", "La información se actualizó exitosamente");
                 return redirect()->to(base_url("registrar/alumnos"));
             }else {
                 // Mostrar mensaje de error si no se pudo actualizar el usuario
-                $this->session->setFlashdata("error", "No se pudo actualizar la información del usuario");
+                session()->setFlashdata("error", "No se pudo actualizar la información del usuario");
                 return redirect()->to(base_url("registrar/alumnos/edit/" . $idAlumno));
             }
                 

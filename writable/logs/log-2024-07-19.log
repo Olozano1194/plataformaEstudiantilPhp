@@ -12,3 +12,256 @@ INFO - 2024-07-19 05:05:37 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-07-19 05:26:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-07-19 05:27:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-07-19 05:27:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-19 07:49:43 --> ErrorException: Undefined variable $AcudientesModel
+[Method: GET, Route: registrar/acudientes]
+in APPPATH\Controllers\registrar\Acudientes.php on line 22.
+ 1 APPPATH\Controllers\registrar\Acudientes.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $AcudientesModel', 'C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Controllers\\registrar\\Acudientes.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Acudientes->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Acudientes))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 07:50:20 --> ErrorException: Undefined variable $AcudientesModel
+[Method: GET, Route: registrar/acudientes]
+in APPPATH\Controllers\registrar\Acudientes.php on line 22.
+ 1 APPPATH\Controllers\registrar\Acudientes.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $AcudientesModel', 'C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Controllers\\registrar\\Acudientes.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Acudientes->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Acudientes))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 07:50:49 --> ErrorException: Undefined variable $AcudientesModel
+[Method: GET, Route: registrar/acudientes]
+in APPPATH\Controllers\registrar\Acudientes.php on line 23.
+ 1 APPPATH\Controllers\registrar\Acudientes.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $AcudientesModel', 'C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Controllers\\registrar\\Acudientes.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Acudientes->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Acudientes))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 07:51:03 --> ErrorException: Undefined variable $AcudientesModel
+[Method: GET, Route: registrar/acudientes]
+in APPPATH\Controllers\registrar\Acudientes.php on line 23.
+ 1 APPPATH\Controllers\registrar\Acudientes.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $AcudientesModel', 'C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Controllers\\registrar\\Acudientes.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Acudientes->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Acudientes))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 07:51:19 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Connection::select()
+[Method: GET, Route: registrar/acudientes]
+in APPPATH\Models\Acudientes_model.php on line 14.
+ 1 APPPATH\Controllers\registrar\Acudientes.php(23): App\Models\Acudientes_model->getAcudientes()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Acudientes->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Acudientes))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-19 07:52:21 --> mysqli_sql_exception: Table 'ryca_plataforma_.genero' doesn't exist in C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `a`.*, `...', 0)
+#1 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.*, `...')
+#2 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.*, `...')
+#3 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `a`.*, `...', Array, false)
+#4 C:\xampp\htdocs\plataforma_estudiantil_dos\app\Models\Acudientes_model.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\plataforma_estudiantil_dos\app\Controllers\registrar\Acudientes.php(23): App\Models\Acudientes_model->getAcudientes()
+#6 C:\xampp\htdocs\plataforma_estudiantil_dos\system\CodeIgniter.php(933): App\Controllers\Registrar\Acudientes->index()
+#7 C:\xampp\htdocs\plataforma_estudiantil_dos\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Acudientes))
+#8 C:\xampp\htdocs\plataforma_estudiantil_dos\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\plataforma_estudiantil_dos\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-07-19 07:52:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'ryca_plataforma_.genero' doesn't exist
+[Method: GET, Route: registrar/acudientes]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `a`.*, `g`.`nombre` as `genero`, `u`.`username` as `usuario`, `u`.`password` as `contraseña`
+FROM `acudiente` `a`
+JOIN `genero` `g` ON `a`.`genero_id` = `g`.`id`
+JOIN `usuario` `u` ON `a`.`usuario_id` = `u`.`id`
+WHERE `a`.`estado` = :a.estado:', [...], false)
+ 2 APPPATH\Models\Acudientes_model.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\registrar\Acudientes.php(23): App\Models\Acudientes_model->getAcudientes()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Acudientes->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Acudientes))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 07:52:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'ryca_plataforma_.genero' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.*, `g`.`nombre` as `genero`, `u`.`username` as `usuario`, `u`.`password` as `contraseña`
+FROM `acudiente` `a`
+JOIN `genero` `g` ON `a`.`genero_id` = `g`.`id`
+JOIN `usuario` `u` ON `a`.`usuario_id` = `u`.`id`
+WHERE `a`.`estado` = 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.*, `g`.`nombre` as `genero`, `u`.`username` as `usuario`, `u`.`password` as `contraseña`
+FROM `acudiente` `a`
+JOIN `genero` `g` ON `a`.`genero_id` = `g`.`id`
+JOIN `usuario` `u` ON `a`.`usuario_id` = `u`.`id`
+WHERE `a`.`estado` = 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `a`.*, `g`.`nombre` as `genero`, `u`.`username` as `usuario`, `u`.`password` as `contraseña`
+FROM `acudiente` `a`
+JOIN `genero` `g` ON `a`.`genero_id` = `g`.`id`
+JOIN `usuario` `u` ON `a`.`usuario_id` = `u`.`id`
+WHERE `a`.`estado` = :a.estado:', [...], false)
+ 4 APPPATH\Models\Acudientes_model.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\registrar\Acudientes.php(23): App\Models\Acudientes_model->getAcudientes()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Acudientes->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Acudientes))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 07:52:21 --> [Caused by] mysqli_sql_exception: Table 'ryca_plataforma_.genero' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `a`.*, `g`.`nombre` as `genero`, `u`.`username` as `usuario`, `u`.`password` as `contraseña`
+FROM `acudiente` `a`
+JOIN `genero` `g` ON `a`.`genero_id` = `g`.`id`
+JOIN `usuario` `u` ON `a`.`usuario_id` = `u`.`id`
+WHERE `a`.`estado` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.*, `g`.`nombre` as `genero`, `u`.`username` as `usuario`, `u`.`password` as `contraseña`
+FROM `acudiente` `a`
+JOIN `genero` `g` ON `a`.`genero_id` = `g`.`id`
+JOIN `usuario` `u` ON `a`.`usuario_id` = `u`.`id`
+WHERE `a`.`estado` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.*, `g`.`nombre` as `genero`, `u`.`username` as `usuario`, `u`.`password` as `contraseña`
+FROM `acudiente` `a`
+JOIN `genero` `g` ON `a`.`genero_id` = `g`.`id`
+JOIN `usuario` `u` ON `a`.`usuario_id` = `u`.`id`
+WHERE `a`.`estado` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `a`.*, `g`.`nombre` as `genero`, `u`.`username` as `usuario`, `u`.`password` as `contraseña`
+FROM `acudiente` `a`
+JOIN `genero` `g` ON `a`.`genero_id` = `g`.`id`
+JOIN `usuario` `u` ON `a`.`usuario_id` = `u`.`id`
+WHERE `a`.`estado` = :a.estado:', [...], false)
+ 5 APPPATH\Models\Acudientes_model.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\registrar\Acudientes.php(23): App\Models\Acudientes_model->getAcudientes()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Acudientes->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Acudientes))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-19 07:53:03 --> mysqli_sql_exception: Table 'ryca_plataforma_.usuario' doesn't exist in C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `a`.*, `...', 0)
+#1 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.*, `...')
+#2 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.*, `...')
+#3 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `a`.*, `...', Array, false)
+#4 C:\xampp\htdocs\plataforma_estudiantil_dos\app\Models\Acudientes_model.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\plataforma_estudiantil_dos\app\Controllers\registrar\Acudientes.php(23): App\Models\Acudientes_model->getAcudientes()
+#6 C:\xampp\htdocs\plataforma_estudiantil_dos\system\CodeIgniter.php(933): App\Controllers\Registrar\Acudientes->index()
+#7 C:\xampp\htdocs\plataforma_estudiantil_dos\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Acudientes))
+#8 C:\xampp\htdocs\plataforma_estudiantil_dos\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\plataforma_estudiantil_dos\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-07-19 07:53:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'ryca_plataforma_.usuario' doesn't exist
+[Method: GET, Route: registrar/acudientes]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `a`.*, `g`.`nombre` as `genero`, `u`.`username` as `usuario`, `u`.`password` as `contraseña`
+FROM `acudiente` `a`
+JOIN `generos` `g` ON `a`.`genero_id` = `g`.`id`
+JOIN `usuario` `u` ON `a`.`usuario_id` = `u`.`id`
+WHERE `a`.`estado` = :a.estado:', [...], false)
+ 2 APPPATH\Models\Acudientes_model.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\registrar\Acudientes.php(23): App\Models\Acudientes_model->getAcudientes()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Acudientes->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Acudientes))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 07:53:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'ryca_plataforma_.usuario' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.*, `g`.`nombre` as `genero`, `u`.`username` as `usuario`, `u`.`password` as `contraseña`
+FROM `acudiente` `a`
+JOIN `generos` `g` ON `a`.`genero_id` = `g`.`id`
+JOIN `usuario` `u` ON `a`.`usuario_id` = `u`.`id`
+WHERE `a`.`estado` = 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.*, `g`.`nombre` as `genero`, `u`.`username` as `usuario`, `u`.`password` as `contraseña`
+FROM `acudiente` `a`
+JOIN `generos` `g` ON `a`.`genero_id` = `g`.`id`
+JOIN `usuario` `u` ON `a`.`usuario_id` = `u`.`id`
+WHERE `a`.`estado` = 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `a`.*, `g`.`nombre` as `genero`, `u`.`username` as `usuario`, `u`.`password` as `contraseña`
+FROM `acudiente` `a`
+JOIN `generos` `g` ON `a`.`genero_id` = `g`.`id`
+JOIN `usuario` `u` ON `a`.`usuario_id` = `u`.`id`
+WHERE `a`.`estado` = :a.estado:', [...], false)
+ 4 APPPATH\Models\Acudientes_model.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\registrar\Acudientes.php(23): App\Models\Acudientes_model->getAcudientes()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Acudientes->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Acudientes))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-19 07:53:03 --> [Caused by] mysqli_sql_exception: Table 'ryca_plataforma_.usuario' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `a`.*, `g`.`nombre` as `genero`, `u`.`username` as `usuario`, `u`.`password` as `contraseña`
+FROM `acudiente` `a`
+JOIN `generos` `g` ON `a`.`genero_id` = `g`.`id`
+JOIN `usuario` `u` ON `a`.`usuario_id` = `u`.`id`
+WHERE `a`.`estado` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.*, `g`.`nombre` as `genero`, `u`.`username` as `usuario`, `u`.`password` as `contraseña`
+FROM `acudiente` `a`
+JOIN `generos` `g` ON `a`.`genero_id` = `g`.`id`
+JOIN `usuario` `u` ON `a`.`usuario_id` = `u`.`id`
+WHERE `a`.`estado` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.*, `g`.`nombre` as `genero`, `u`.`username` as `usuario`, `u`.`password` as `contraseña`
+FROM `acudiente` `a`
+JOIN `generos` `g` ON `a`.`genero_id` = `g`.`id`
+JOIN `usuario` `u` ON `a`.`usuario_id` = `u`.`id`
+WHERE `a`.`estado` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `a`.*, `g`.`nombre` as `genero`, `u`.`username` as `usuario`, `u`.`password` as `contraseña`
+FROM `acudiente` `a`
+JOIN `generos` `g` ON `a`.`genero_id` = `g`.`id`
+JOIN `usuario` `u` ON `a`.`usuario_id` = `u`.`id`
+WHERE `a`.`estado` = :a.estado:', [...], false)
+ 5 APPPATH\Models\Acudientes_model.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\registrar\Acudientes.php(23): App\Models\Acudientes_model->getAcudientes()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Acudientes->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Acudientes))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-19 07:53:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-19 07:53:48 --> ErrorException: Undefined property: CodeIgniter\View\View::$session
+[Method: GET, Route: registrar/acudientes]
+in APPPATH\Views\admin\acudientes\list.php on line 22.
+ 1 APPPATH\Views\admin\acudientes\list.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\acudientes\\list.php', 22)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\acudientes\\list.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/acudientes/list', [], true)
+ 5 APPPATH\Controllers\registrar\Acudientes.php(28): view('admin/acudientes/list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Acudientes->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Acudientes))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-19 07:55:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-19 07:55:14 --> ErrorException: Attempt to read property "id" on array
+[Method: GET, Route: registrar/acudientes]
+in APPPATH\Views\admin\acudientes\list.php on line 64.
+ 1 APPPATH\Views\admin\acudientes\list.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on array', 'C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\acudientes\\list.php', 64)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\acudientes\\list.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/acudientes/list', [], true)
+ 5 APPPATH\Controllers\registrar\Acudientes.php(28): view('admin/acudientes/list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Acudientes->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Acudientes))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-19 07:58:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

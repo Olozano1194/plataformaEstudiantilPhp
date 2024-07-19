@@ -19,17 +19,17 @@
                     </div>
                 </div>
                 <hr>
-                <?php if($this->session->flashdata("Registrado")):?>
+                <?php if(session()->getFlashdata("Registrado")):?>
                     <div class="alert alert-success alert-dismissible">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                        <p><i class="icon fa fa-check-circle"></i><?php echo $this->session->flashdata("Registrado"); ?></p>                                
+                        <p><i class="icon fa fa-check-circle"></i><?php session()->getFlashdata("Registrado"); ?></p>                                
                     </div>
                     <hr>
                 <?php endif;?> 
-                <?php if($this->session->flashdata("Actualizado")):?>
+                <?php if(session()->getFlashdata("Actualizado")):?>
                     <div class="alert alert-warning alert-dismissible">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                        <p><i class="icon fa fa-check-circle"></i><?php echo $this->session->flashdata("Actualizado"); ?></p>                                
+                        <p><i class="icon fa fa-check-circle"></i><?php session()->getFlashdata("Actualizado"); ?></p>                                
                     </div>
                     <hr>
                 <?php endif;?>
@@ -50,20 +50,20 @@
                             </thead>
                             <tbody>
                                 <?php if(!empty($acudientes)):?>
-                                    <?php foreach($acudientes as $acudientes):?>
+                                    <?php foreach($acudientes as $acu):?>
                                         <tr>
-                                            <td><?php echo $acudientes->id;?></td>
-                                            <td><?php echo $acudientes->nombres;?></td>
-                                            <td><?php echo $acudientes->email;?></td>
-                                            <td><?php echo $acudientes->celular;?></td>
-                                            <td><?php echo $acudientes->profesion;?></td>
-                                            <td><?php echo $acudientes->usuario;?></td>
+                                            <td><?= $acu->id;?></td>
+                                            <td><?= $acu->nombres;?></td>
+                                            <td><?= $acu->email;?></td>
+                                            <td><?= $acu->celular;?></td>
+                                            <td><?= $acu->profesion;?></td>
+                                            <td><?= $acu->usuario;?></td>
                                             <td></td>
                                             <td>
                                                 <div class="btn-group">
-                                                    <a href="<?php echo base_url()?>registrar/acudientes/edit/<?php echo $acudientes->id;?>" title="Actualizar" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
-                                                    <a href="<?php echo base_url();?>registrar/acudientes/disable/<?php echo $acudientes->usuario_id;?>" title="Desactivar Usuario" class="btn btn-info btn-disable"><span class="fa fa-user-times"></span></a>
-                                                    <a href="<?php echo base_url();?>registrar/acudientes/delete/<?php echo $acudientes->id;?>" title="Eliminar" class="btn btn-danger btn-remove"><span class="fa fa-remove"></span></a>
+                                                    <a href="<?php echo base_url()?>registrar/acudientes/edit/<?php echo $acu->id;?>" title="Actualizar" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
+                                                    <a href="<?php echo base_url();?>registrar/acudientes/disable/<?php echo $acu->usuario_id;?>" title="Desactivar Usuario" class="btn btn-info btn-disable"><span class="fa fa-user-times"></span></a>
+                                                    <a href="<?php echo base_url();?>registrar/acudientes/delete/<?php echo $acu->id;?>" title="Eliminar" class="btn btn-danger btn-remove"><span class="fa fa-remove"></span></a>
                                                 </div>
                                             </td>
                                         </tr>

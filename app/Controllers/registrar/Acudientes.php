@@ -1,91 +1,115 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+namespace App\Controllers\Registrar;
+use App\Models\Acudientes_model;
+use CodeIgniter\Controller;
 
-class Acudientes extends CI_Controller {
+
+
+class Acudientes extends Controller {
+    protected $AcudientesModel;
 
     
     public function __construct()
     {
-        parent::__construct();
-        $this->load->model("Acudientes_model");
+                
+        $this->AcudientesModel = new Acudientes_model();
     }
 
     public function index()
 	{
-        $data = array(
+        $acudientesModel = new Acudientes_model();
+        $data = [
             
-            'acudientes' => $this->Acudientes_model->getAcudientes(),
-        );
-        $this->load->view('layouts/header');
-        $this->load->view('layouts/aside',$data);
-        $this->load->view('admin/acudientes/list',$data);
-        $this->load->view('layouts/footer');
+            'acudientes' => $acudientesModel->getAcudientes(),
+        ];
+
+        echo view('layouts/header');
+        echo view('layouts/aside',$data);
+        echo view('admin/acudientes/list',$data);
+        echo view('layouts/footer');
     }
 
     public function add()
     {
-        $fechaIngreso = date('Y-m-d');
-        $data = array(
-            'genero' => $this->Acudientes_model->getGeneros(),
-            'fechaIngreso' => $fechaIngreso
-        );
+        $acudientesModel = new Acudientes_model();
 
-        $this->load->view('layouts/header');
-        $this->load->view('layouts/aside',$data);
-        $this->load->view('admin/acudientes/add',$data);
-        $this->load->view('layouts/footer');
+        $fechaIngreso = date('Y-m-d');
+
+        $data = [
+            'genero' => $AcudientesModel->getGeneros(),
+            'fechaIngreso' => $fechaIngreso
+        ];
+
+        echo view('layouts/header');
+        echo view('layouts/aside',$data);
+        echo view('admin/acudientes/add',$data);
+        echo view('layouts/footer');
     }    
 
     public function store()
     {
-        $nombres = $this->input->post("nombres");
-        $genero = $this->input->post("genero");
-        $profesion = $this->input->post("profesion");
-        $email = $this->input->post("email");
-        $celular = $this->input->post("celular");
-        $direccion = $this->input->post("direccion");
-        $fechaIngreso = $this->input->post("fechaIngreso");
+        $AcudientesModel = new Acudientes_model();
+
+        $nombres = $this->request->getPost("nombres");
+        $genero = $this->request->getPost("genero");
+        $profesion = $this->request->getPost("profesion");
+        $email = $this->request->getPost("email");
+        $celular = $this->request->getPost("celular");
+        $direccion = $this->request->getPost("direccion");
+        $fechaIngreso = $this->request->getPost("fechaIngreso");
         
 
-        $username = $this->input->post("username");
-        $password = $this->input->post("password");
+        $username = $this->request->getPost("username");
+        $password = $this->request->getPost("password");
 
-        $this->form_validation->set_rules("nombres","Nombre Completo","required");
-        $this->form_validation->set_rules("genero","Seleccionar Genero","required");
-        $this->form_validation->set_rules("profesion","Profesion","required");
-        $this->form_validation->set_rules("email","Email","required|is_unique[estudiantes.email]");
-        $this->form_validation->set_rules("celular","Celular","required");
-        $this->form_validation->set_rules("direccion","Direccion","required");
-        $this->form_validation->set_rules("username","Username","required");
-        $this->form_validation->set_rules("password","Password","required");
+         // Validación del formulario
+         $validation = \Config\Services::validation();
+         $validation->setRules([
+            'nombres' => 'required',
+            'genero' => 'required',
+            'profesion' => 'required',
+            'email' => 'required|valid_email',
+            'celular' => 'required',
+            'direccion' => 'required',
+            'username' => 'required',
+            'password' => 'required'
+         ]);
 
-        if ($this->form_validation->run())
-        {
-            $data = array(
+        if ($validation->withRequest($this->request)->run()) {
+
+            $dataUsuario = [
                 'username' => $username,
                 'password' => sha1($password),
                 'dia_ingreso' => $fechaIngreso,
                 'rol_id' => "3" ,
                 'estado' => "1"                 
-            );
-            if ($this->Acudientes_model->saveUsuario($data)) {
-                $idUsuario = $this->Acudientes_model->lastID();
-                $this->saveAcudiente($idUsuario,$nombres,$genero,$email,$celular,$direccion,$profesion);
-                $this->session->set_flashdata("Registrado","La información se guardo exitosamente");
-                redirect(base_url()."registrar/acudientes");
+            ];
+
+            // Guardar usuario y obtener ID
+            if ($alumnosModel->saveUsuario($dataUsuario)) {
+                $idUsuario = $alumnosModel->lastID();
+
+                // Guardar estudiante
+                $this->saveAcudiente($idUsuario, $nombres, $genero, $email, $celular, $direccion, $profesion);
+
+                // Mostrar mensaje de éxito y redirigir
+                session()->setFlashdata("success", "La información se guardó exitosamente");
+                return redirect()->to(base_url("registrar/acudientes"));
+            }else {
+                // Mostrar mensaje de error si no se pudo guardar el usuario
+                session()->setFlashdata("error", "No se pudo guardar la información del acudiente");
+                return redirect()->to(base_url("registrar/acudientes/add"));
             }
-            else {
-                $this->session->set_flashdata("Error","No se pudo guardar la informacion");
-                redirect(base_url()."registrar/acudientes/add");
-            }
-        }
-        else {
-            $this->add();
-        }       
+        } else {
+            // Mostrar vista de formulario con errores de validación
+            return $this->add();
+        }   
+         
     }
     protected function saveAcudiente($idUsuario,$nombres,$genero,$email,$celular,$direccion,$profesion)
     { 
-        $data  = array(
+        $acudientesModel = new Acudientes_model();
+        $data  = [
 
             'nombres' => $nombres, 
             'profesion' => $profesion,
@@ -96,85 +120,95 @@ class Acudientes extends CI_Controller {
             'genero_id' => $genero,    
             'usuario_id' => $idUsuario
                 
-        );
+        ];
 
-        $this->Acudientes_model->saveAcudiente($data); 
+        return $acudientesModel->saveAcudiente($data); 
     }
 
     public function edit($id)
     {
-		$data  = array(
-            'acudiente' => $this->Acudientes_model->getAcudiente($id),
-            'genero' => $this->Acudientes_model->getGeneros(),
-        );
+        $acudientesModel = new Acudientes_model();
+		$data  = [
+            'acudiente' => $acudientesModel->getAcudiente($id),
+            'genero' => $acudientesModel->getGeneros(),
+        ];
         
-		$this->load->view("layouts/header");
-		$this->load->view("layouts/aside",$data);
-		$this->load->view("admin/acudientes/edit",$data);
-		$this->load->view("layouts/footer");
+		echo view("layouts/header");
+		echo view("layouts/aside",$data);
+		echo view("admin/acudientes/edit",$data);
+		echo view("layouts/footer");
     }
 
     public function update()
     {
-        $idAcudiente = $this->input->post("idAcudiente");
-        $idUsuario = $this->input->post("idUsuario");
-        $nombres = $this->input->post("nombres");
-        $genero = $this->input->post("genero");
-        $profesion = $this->input->post("profesion");
-        $email = $this->input->post("email");
-        $celular = $this->input->post("celular");
-        $direccion = $this->input->post("direccion");
-        $fechaIngreso = $this->input->post("fechaIngreso");
+        //iniciar el modelo
+        $acudientesModel = new Acudientes_model();
+
+        $idAcudiente = $this->request->getPost("idAcudiente");
+        $idUsuario = $this->request->getPost("idUsuario");
+        $nombres = $this->request->getPost("nombres");
+        $genero = $this->request->getPost("genero");
+        $profesion = $this->request->getPost("profesion");
+        $email = $this->request->getPost("email");
+        $celular = $this->request->getPost("celular");
+        $direccion = $this->request->getPost("direccion");
+        $fechaIngreso = $this->request->getPost("fechaIngreso");
                 
-        $username = $this->input->post("username");
-        $password = $this->input->post("password");
+        $username = $this->request->getPost("username");
+        $password = $this->request->getPost("password");
 
-        $acudienteActual = $this->Acudientes_model->getAcudiente($idAcudiente);
+        //obtener el alumno actual
+        $acudienteActual = $acudientesModel->getAcudiente($idAcudiente);
 
-        $this->form_validation->set_rules("nombres","Nombre Completo","required");
-        $this->form_validation->set_rules("genero","Seleccionar Genero","required");
-        $this->form_validation->set_rules("profesion","Profesion","required");
-        if ($email == $acudienteActual->email) {
-            $is_unique = '';
-        }
-        else {
-            $is_unique = "|is_unique[estudiantes.email]";
-        }
-        $this->form_validation->set_rules("celular","Celular","required");
-        $this->form_validation->set_rules("direccion","Direccion","required");
-        if ($username == $acudienteActual->usuario) {
-            $is_unique = '';
-        }
-        else {
-            $is_unique = "|is_unique[estudiantes.usuario]";
-        }
-        $this->form_validation->set_rules("password","Password","required");
+        //Configurar reglas de validación
+        $validation = \Config\Services::validation();
 
-        if ($this->form_validation->run())
-        {
-            $data = array(
+        $validation->setRules([
+            'nombres' => 'required',
+            'genero' => 'required',
+            'profesion' => 'required',
+            'email' => 'required' . ($email != $alumnoActual->email ? '|is_unique[estudiantes.email]' : ''),
+            'celular' => 'required',
+            'direccion' => 'required',
+            'username' => 'required'. ($username != $alumnoActual->username ? '|is_unique[estudiantes.username]' : ''),
+            'password' => 'required'
+            
+        ]);
+
+        //Ejecutar la validación
+        if ($validation->withRequest($this->request)->run()) {
+            // Preparar datos para actualizar usuario
+            $data = [
                 'username' => $username,
                 'password' => sha1($password),  
-            );
+            ];
+
+            //Actualizar usuario en la base de datos
+            if ($acudientesModel->updateUsuario($idUsuario, $dataUsuario)) {
+                // Actualizar estudiante
+                $acudientesModel->updateEstudiante($idAcudiente,$nombres,$genero,$profesion,$email,$celular,$direccion);
     
-            if ($this->Acudientes_model->updateUsuario($idUsuario,$data)) {
-                $this->updateAcudiente($idAcudiente,$nombres,$genero,$profesion,$email,$celular,$direccion);
-                $this->session->set_flashdata("Actualizado","La información se actualizo exitosamente");
-                redirect(base_url()."registrar/acudientes");
+                // Mostrar mensaje de éxito y redirigir
+                session()->setFlashdata("Atualizado", "La información se actualizó exitosamente");
+                return redirect()->to(base_url("registrar/acudientes"));
+            }else {
+                // Mostrar mensaje de error si no se pudo actualizar el usuario
+                session()->setFlashdata("error", "No se pudo actualizar la información del usuario");
+                return redirect()->to(base_url("registrar/acudientes/edit/" . $idAlumno));
             }
-            else{
-                $this->session->set_flashdata("Error","No se pudo actualizar la informacion");
-                redirect(base_url()."registrar/acudientes/edit/".$idAcudiente);
-            }
+
+        }else {
+            // Mostrar vista de edición con errores de validación
+            return $this->edit($idAcudiente);
         }
-        else {
-            $this->edit($idAcudiente);
-        }		
+       		
     }
 
     protected function updateAcudiente($idAcudiente,$nombres,$genero,$profesion,$email,$celular,$direccion)
-    { 
-        $data  = array(
+    {
+        $acudientesModel = new AcudientesModel();
+
+        $data  = [
             'nombres' => $nombres,
             'genero_id' => $genero,
             'profesion' => $profesion,
@@ -182,29 +216,42 @@ class Acudientes extends CI_Controller {
             'celular' => $celular,
             'direccion' => $direccion
             
-        );
+        ];
 
-        $this->Acudientes_model->updateAcudiente($idAcudiente,$data); 
+        return $acudientesModel->updateAcudiente($idAcudiente,$data); 
     }
 
     public function delete($id)
     {
-        $data = array(
+        $acudientesModel = new AcudientesModel();
+
+        $data = [
             'estado' => "0" ,
-        );
-         
-        $this->Acudientes_model->updateAcudiente($id,$data);
-        echo "registrar/acudientes";
-    } 
+        ];
+
+         //Actualiza el estado del estudiante
+         $alumnosModel->updateEstudiante($id,$data);
+
+         //Redirecciona a la lista de alumnos
+         return redirect()->to(base_url("registrar/acudientes"));
+    }    
+        
 
     public function disable($usuario_id)
     {
-        $data = array(
+        $acudientesModel = new AcudientesModel();
+
+        $data = [
             'estado' => "0" ,
-        );
+        ];
+
+         //Actualiza el estado del estudiante
+         $alumnosModel->updateEstudiante($usuario_id,$data);
+
+         //Redirecciona a la lista de alumnos
+         return redirect()->to(base_url("registrar/acudientes"));
          
-        $this->Acudientes_model->updateUsuario($usuario_id,$data);
-        echo "registrar/acudientes";
+        
     } 
 
 }
