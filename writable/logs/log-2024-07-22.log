@@ -1,0 +1,510 @@
+INFO - 2024-07-22 07:07:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-22 07:07:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-22 07:11:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-22 07:12:00 --> Error: Call to undefined function form_error()
+[Method: GET, Route: registrar/alumnos/edit/13]
+in APPPATH\Views\admin\alumnos\edit.php on line 30.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/edit', [], true)
+ 4 APPPATH\Controllers\registrar\Alumnos.php(151): view('admin/alumnos/edit', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->edit('13')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-22 07:30:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-22 08:04:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-22 08:04:14 --> ParseError: syntax error, unexpected token "if"
+[Method: GET, Route: registrar/alumnos/edit/13]
+in APPPATH\Views\admin\alumnos\edit.php on line 110.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/edit', [], true)
+ 3 APPPATH\Controllers\registrar\Alumnos.php(153): view('admin/alumnos/edit', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->edit('13')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-22 08:06:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-22 08:06:02 --> ParseError: syntax error, unexpected token "if"
+[Method: GET, Route: registrar/alumnos/edit/13]
+in APPPATH\Views\admin\alumnos\edit.php on line 110.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/edit', [], true)
+ 3 APPPATH\Controllers\registrar\Alumnos.php(153): view('admin/alumnos/edit', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->edit('13')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-22 08:06:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-22 08:06:09 --> ParseError: syntax error, unexpected token "if"
+[Method: GET, Route: registrar/alumnos/edit/13]
+in APPPATH\Views\admin\alumnos\edit.php on line 110.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/edit', [], true)
+ 3 APPPATH\Controllers\registrar\Alumnos.php(153): view('admin/alumnos/edit', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->edit('13')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-22 08:08:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-22 08:08:53 --> ParseError: syntax error, unexpected token "if"
+[Method: GET, Route: registrar/alumnos/edit/13]
+in APPPATH\Views\admin\alumnos\edit.php on line 117.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/edit', [], true)
+ 3 APPPATH\Controllers\registrar\Alumnos.php(153): view('admin/alumnos/edit', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->edit('13')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-22 08:10:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-22 08:10:01 --> ParseError: syntax error, unexpected token "if"
+[Method: GET, Route: registrar/alumnos/edit/13]
+in APPPATH\Views\admin\alumnos\edit.php on line 126.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/edit', [], true)
+ 3 APPPATH\Controllers\registrar\Alumnos.php(153): view('admin/alumnos/edit', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->edit('13')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-22 08:11:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-22 08:11:39 --> ParseError: syntax error, unexpected token "if"
+[Method: GET, Route: registrar/alumnos/edit/13]
+in APPPATH\Views\admin\alumnos\edit.php on line 170.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/edit', [], true)
+ 3 APPPATH\Controllers\registrar\Alumnos.php(153): view('admin/alumnos/edit', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->edit('13')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-22 08:12:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-22 08:12:08 --> ParseError: syntax error, unexpected end of file, expecting "elseif" or "else" or "endif"
+[Method: GET, Route: registrar/alumnos/edit/13]
+in APPPATH\Views\admin\alumnos\edit.php on line 191.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/edit', [], true)
+ 3 APPPATH\Controllers\registrar\Alumnos.php(153): view('admin/alumnos/edit', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->edit('13')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-22 08:15:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-22 08:15:52 --> ParseError: syntax error, unexpected end of file, expecting "elseif" or "else" or "endif"
+[Method: GET, Route: registrar/alumnos/edit/13]
+in APPPATH\Views\admin\alumnos\edit.php on line 193.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/edit', [], true)
+ 3 APPPATH\Controllers\registrar\Alumnos.php(153): view('admin/alumnos/edit', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->edit('13')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-22 08:19:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-22 08:19:59 --> ParseError: syntax error, unexpected end of file, expecting "elseif" or "else" or "endif"
+[Method: GET, Route: registrar/alumnos/edit/13]
+in APPPATH\Views\admin\alumnos\edit.php on line 175.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/edit', [], true)
+ 3 APPPATH\Controllers\registrar\Alumnos.php(153): view('admin/alumnos/edit', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->edit('13')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-22 08:23:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-22 08:24:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-22 08:24:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-22 08:25:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-22 08:25:33 --> ErrorException: Undefined property: stdClass::$sigla
+[Method: GET, Route: registrar/alumnos/edit/9]
+in APPPATH\Views\admin\alumnos\edit.php on line 71.
+ 1 APPPATH\Views\admin\alumnos\edit.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$sigla', 'C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\edit.php', 71)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\edit.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/edit', [], true)
+ 5 APPPATH\Controllers\registrar\Alumnos.php(153): view('admin/alumnos/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->edit('9')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-22 08:33:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-22 08:35:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-22 08:39:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-22 08:39:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-22 08:47:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-22 08:47:19 --> ErrorException: Undefined property: stdClass::$genero
+[Method: GET, Route: registrar/alumnos/edit/9]
+in APPPATH\Views\admin\alumnos\edit.php on line 71.
+ 1 APPPATH\Views\admin\alumnos\edit.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$genero', 'C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\edit.php', 71)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\edit.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/edit', [], true)
+ 5 APPPATH\Controllers\registrar\Alumnos.php(153): view('admin/alumnos/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->edit('9')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-22 08:49:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-22 08:49:56 --> ErrorException: Undefined property: stdClass::$sigla
+[Method: GET, Route: registrar/alumnos/edit/9]
+in APPPATH\Views\admin\alumnos\edit.php on line 71.
+ 1 APPPATH\Views\admin\alumnos\edit.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$sigla', 'C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\edit.php', 71)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\edit.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/edit', [], true)
+ 5 APPPATH\Controllers\registrar\Alumnos.php(153): view('admin/alumnos/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->edit('9')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-22 08:50:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-22 08:50:08 --> ErrorException: Undefined property: stdClass::$username
+[Method: GET, Route: registrar/alumnos/edit/9]
+in APPPATH\Views\admin\alumnos\edit.php on line 167.
+ 1 APPPATH\Views\admin\alumnos\edit.php(167): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$username', 'C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\edit.php', 167)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\alumnos\\edit.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/alumnos/edit', [], true)
+ 5 APPPATH\Controllers\registrar\Alumnos.php(153): view('admin/alumnos/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Alumnos->edit('9')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Alumnos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-22 08:51:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-22 09:03:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-22 09:04:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-22 09:05:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-22 09:06:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-22 09:06:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-22 09:07:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-22 09:07:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-22 09:07:26 --> Error: Call to undefined function form_error()
+[Method: GET, Route: registrar/acudientes/edit/3]
+in APPPATH\Views\admin\acudientes\edit.php on line 99.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/acudientes/edit', [], true)
+ 4 APPPATH\Controllers\registrar\Acudientes.php(152): view('admin/acudientes/edit', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Acudientes->edit('3')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Acudientes))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-22 09:09:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-22 09:10:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-22 09:11:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-22 09:24:20 --> mysqli_sql_exception: Unknown column 'u.nombre' in 'field list' in C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `a`.*, `...', 0)
+#1 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.*, `...')
+#2 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.*, `...')
+#3 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `a`.*, `...', Array, false)
+#4 C:\xampp\htdocs\plataforma_estudiantil_dos\app\Models\Acudientes_model.php(62): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\plataforma_estudiantil_dos\app\Controllers\registrar\Acudientes.php(134): App\Models\Acudientes_model->getAcudiente('3')
+#6 C:\xampp\htdocs\plataforma_estudiantil_dos\system\CodeIgniter.php(933): App\Controllers\Registrar\Acudientes->edit('3')
+#7 C:\xampp\htdocs\plataforma_estudiantil_dos\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Acudientes))
+#8 C:\xampp\htdocs\plataforma_estudiantil_dos\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\plataforma_estudiantil_dos\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-07-22 09:24:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'u.nombre' in 'field list'
+[Method: GET, Route: registrar/acudientes/edit/3]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `a`.*, `u`.`nombre` AS `usuario_nombre`
+FROM `acudiente` `a`
+JOIN `generos` `g` ON `a`.`genero_id`
+      = `g`.`id`
+JOIN `usuarios` `u` ON `a`.`usuario_id`= `u`.`id`
+WHERE `a`.`id` = :a.id:
+AND `a`.`estado` = :a.estado:', [...], false)
+ 2 APPPATH\Models\Acudientes_model.php(62): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\registrar\Acudientes.php(134): App\Models\Acudientes_model->getAcudiente('3')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Acudientes->edit('3')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Acudientes))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-22 09:24:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'u.nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.*, `u`.`nombre` AS `usuario_nombre`
+FROM `acudiente` `a`
+JOIN `generos` `g` ON `a`.`genero_id`
+      = `g`.`id`
+JOIN `usuarios` `u` ON `a`.`usuario_id`= `u`.`id`
+WHERE `a`.`id` = \'3\'
+AND `a`.`estado` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.*, `u`.`nombre` AS `usuario_nombre`
+FROM `acudiente` `a`
+JOIN `generos` `g` ON `a`.`genero_id`
+      = `g`.`id`
+JOIN `usuarios` `u` ON `a`.`usuario_id`= `u`.`id`
+WHERE `a`.`id` = \'3\'
+AND `a`.`estado` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `a`.*, `u`.`nombre` AS `usuario_nombre`
+FROM `acudiente` `a`
+JOIN `generos` `g` ON `a`.`genero_id`
+      = `g`.`id`
+JOIN `usuarios` `u` ON `a`.`usuario_id`= `u`.`id`
+WHERE `a`.`id` = :a.id:
+AND `a`.`estado` = :a.estado:', [...], false)
+ 4 APPPATH\Models\Acudientes_model.php(62): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\registrar\Acudientes.php(134): App\Models\Acudientes_model->getAcudiente('3')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Acudientes->edit('3')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Acudientes))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-22 09:24:21 --> [Caused by] mysqli_sql_exception: Unknown column 'u.nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `a`.*, `u`.`nombre` AS `usuario_nombre`
+FROM `acudiente` `a`
+JOIN `generos` `g` ON `a`.`genero_id`
+      = `g`.`id`
+JOIN `usuarios` `u` ON `a`.`usuario_id`= `u`.`id`
+WHERE `a`.`id` = \'3\'
+AND `a`.`estado` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.*, `u`.`nombre` AS `usuario_nombre`
+FROM `acudiente` `a`
+JOIN `generos` `g` ON `a`.`genero_id`
+      = `g`.`id`
+JOIN `usuarios` `u` ON `a`.`usuario_id`= `u`.`id`
+WHERE `a`.`id` = \'3\'
+AND `a`.`estado` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.*, `u`.`nombre` AS `usuario_nombre`
+FROM `acudiente` `a`
+JOIN `generos` `g` ON `a`.`genero_id`
+      = `g`.`id`
+JOIN `usuarios` `u` ON `a`.`usuario_id`= `u`.`id`
+WHERE `a`.`id` = \'3\'
+AND `a`.`estado` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `a`.*, `u`.`nombre` AS `usuario_nombre`
+FROM `acudiente` `a`
+JOIN `generos` `g` ON `a`.`genero_id`
+      = `g`.`id`
+JOIN `usuarios` `u` ON `a`.`usuario_id`= `u`.`id`
+WHERE `a`.`id` = :a.id:
+AND `a`.`estado` = :a.estado:', [...], false)
+ 5 APPPATH\Models\Acudientes_model.php(62): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\registrar\Acudientes.php(134): App\Models\Acudientes_model->getAcudiente('3')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Acudientes->edit('3')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Acudientes))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-22 09:26:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-22 09:27:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-22 09:27:57 --> ErrorException: Undefined variable $acudiente
+[Method: GET, Route: registrar/acudientes/edit/3]
+in APPPATH\Models\Acudientes_model.php on line 67.
+ 1 APPPATH\Models\Acudientes_model.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $acudiente', 'C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Models\\Acudientes_model.php', 67)
+ 2 APPPATH\Controllers\registrar\Acudientes.php(134): App\Models\Acudientes_model->getAcudiente('3')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Acudientes->edit('3')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Acudientes))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-22 09:28:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-22 09:28:12 --> ErrorException: Attempt to read property "id" on null
+[Method: GET, Route: registrar/acudientes/edit/3]
+in APPPATH\Views\admin\acudientes\edit.php on line 25.
+ 1 APPPATH\Views\admin\acudientes\edit.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on null', 'C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\acudientes\\edit.php', 25)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\acudientes\\edit.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/acudientes/edit', [], true)
+ 5 APPPATH\Controllers\registrar\Acudientes.php(156): view('admin/acudientes/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Acudientes->edit('3')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Acudientes))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-22 09:32:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-22 09:32:07 --> ErrorException: Attempt to read property "id" on null
+[Method: GET, Route: registrar/acudientes/edit/3]
+in APPPATH\Views\admin\acudientes\edit.php on line 25.
+ 1 APPPATH\Views\admin\acudientes\edit.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on null', 'C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\acudientes\\edit.php', 25)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\acudientes\\edit.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/acudientes/edit', [], true)
+ 5 APPPATH\Controllers\registrar\Acudientes.php(154): view('admin/acudientes/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Acudientes->edit('3')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Acudientes))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-22 09:32:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-22 09:32:10 --> ErrorException: Attempt to read property "id" on null
+[Method: GET, Route: registrar/acudientes/edit/3]
+in APPPATH\Views\admin\acudientes\edit.php on line 25.
+ 1 APPPATH\Views\admin\acudientes\edit.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on null', 'C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\acudientes\\edit.php', 25)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Views\\admin\\acudientes\\edit.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/acudientes/edit', [], true)
+ 5 APPPATH\Controllers\registrar\Acudientes.php(154): view('admin/acudientes/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Acudientes->edit('3')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Acudientes))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-22 09:34:25 --> ParseError: syntax error, unexpected token "catch", expecting "function" or "const"
+[Method: GET, Route: registrar/acudientes/edit/3]
+in APPPATH\Controllers\registrar\Acudientes.php on line 148.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\plataforma_estudiantil_dos\\app\\Controllers\\Registrar\\Acudientes.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Registrar\\Acudientes')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Registrar\\Acudientes')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Registrar\\Acudientes', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-22 09:36:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-22 09:45:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-22 09:46:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-22 09:46:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-22 09:46:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-22 09:47:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-22 09:47:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-22 09:47:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-22 09:49:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-22 09:58:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-22 09:58:18 --> mysqli_sql_exception: Unknown column 'g.nombre as genero u.username' in 'field list' in C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `a`.*, `...', 0)
+#1 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.*, `...')
+#2 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.*, `...')
+#3 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `a`.*, `...', Array, false)
+#4 C:\xampp\htdocs\plataforma_estudiantil_dos\app\Models\Acudientes_model.php(62): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\plataforma_estudiantil_dos\app\Controllers\registrar\Acudientes.php(136): App\Models\Acudientes_model->getAcudiente('3')
+#6 C:\xampp\htdocs\plataforma_estudiantil_dos\system\CodeIgniter.php(933): App\Controllers\Registrar\Acudientes->edit('3')
+#7 C:\xampp\htdocs\plataforma_estudiantil_dos\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Acudientes))
+#8 C:\xampp\htdocs\plataforma_estudiantil_dos\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\plataforma_estudiantil_dos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\plataforma_estudiantil_dos\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-07-22 09:58:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'g.nombre as genero u.username' in 'field list'
+[Method: GET, Route: registrar/acudientes/edit/3]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `a`.*, `g`.`nombre as genero u`.`username` as `username`, `u`.`password` as `contraseña`
+FROM `acudiente` `a`
+JOIN `generos` `g` ON `a`.`genero_id`
+      = `g`.`id`
+JOIN `usuarios` `u` ON `a`.`usuario_id`= `u`.`id`
+WHERE `a`.`id` = :a.id:
+AND `a`.`estado` = :a.estado:', [...], false)
+ 2 APPPATH\Models\Acudientes_model.php(62): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\registrar\Acudientes.php(136): App\Models\Acudientes_model->getAcudiente('3')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Acudientes->edit('3')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Acudientes))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-22 09:58:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'g.nombre as genero u.username' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.*, `g`.`nombre as genero u`.`username` as `username`, `u`.`password` as `contraseña`
+FROM `acudiente` `a`
+JOIN `generos` `g` ON `a`.`genero_id`
+      = `g`.`id`
+JOIN `usuarios` `u` ON `a`.`usuario_id`= `u`.`id`
+WHERE `a`.`id` = \'3\'
+AND `a`.`estado` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.*, `g`.`nombre as genero u`.`username` as `username`, `u`.`password` as `contraseña`
+FROM `acudiente` `a`
+JOIN `generos` `g` ON `a`.`genero_id`
+      = `g`.`id`
+JOIN `usuarios` `u` ON `a`.`usuario_id`= `u`.`id`
+WHERE `a`.`id` = \'3\'
+AND `a`.`estado` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `a`.*, `g`.`nombre as genero u`.`username` as `username`, `u`.`password` as `contraseña`
+FROM `acudiente` `a`
+JOIN `generos` `g` ON `a`.`genero_id`
+      = `g`.`id`
+JOIN `usuarios` `u` ON `a`.`usuario_id`= `u`.`id`
+WHERE `a`.`id` = :a.id:
+AND `a`.`estado` = :a.estado:', [...], false)
+ 4 APPPATH\Models\Acudientes_model.php(62): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\registrar\Acudientes.php(136): App\Models\Acudientes_model->getAcudiente('3')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Acudientes->edit('3')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Acudientes))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-22 09:58:18 --> [Caused by] mysqli_sql_exception: Unknown column 'g.nombre as genero u.username' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `a`.*, `g`.`nombre as genero u`.`username` as `username`, `u`.`password` as `contraseña`
+FROM `acudiente` `a`
+JOIN `generos` `g` ON `a`.`genero_id`
+      = `g`.`id`
+JOIN `usuarios` `u` ON `a`.`usuario_id`= `u`.`id`
+WHERE `a`.`id` = \'3\'
+AND `a`.`estado` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.*, `g`.`nombre as genero u`.`username` as `username`, `u`.`password` as `contraseña`
+FROM `acudiente` `a`
+JOIN `generos` `g` ON `a`.`genero_id`
+      = `g`.`id`
+JOIN `usuarios` `u` ON `a`.`usuario_id`= `u`.`id`
+WHERE `a`.`id` = \'3\'
+AND `a`.`estado` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.*, `g`.`nombre as genero u`.`username` as `username`, `u`.`password` as `contraseña`
+FROM `acudiente` `a`
+JOIN `generos` `g` ON `a`.`genero_id`
+      = `g`.`id`
+JOIN `usuarios` `u` ON `a`.`usuario_id`= `u`.`id`
+WHERE `a`.`id` = \'3\'
+AND `a`.`estado` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `a`.*, `g`.`nombre as genero u`.`username` as `username`, `u`.`password` as `contraseña`
+FROM `acudiente` `a`
+JOIN `generos` `g` ON `a`.`genero_id`
+      = `g`.`id`
+JOIN `usuarios` `u` ON `a`.`usuario_id`= `u`.`id`
+WHERE `a`.`id` = :a.id:
+AND `a`.`estado` = :a.estado:', [...], false)
+ 5 APPPATH\Models\Acudientes_model.php(62): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\registrar\Acudientes.php(136): App\Models\Acudientes_model->getAcudiente('3')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Registrar\Acudientes->edit('3')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar\Acudientes))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-22 09:58:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

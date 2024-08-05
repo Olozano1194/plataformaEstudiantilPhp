@@ -136,19 +136,29 @@ class Alumnos extends Controller {
    
     public function edit($id)
     {
-        $alumnosModel = new Alumnos_model();
-		$data  = [
-            'alumno' => $alumnosModel->getAlumno($id),
-            'genero' => $alumnosModel->getGeneros(),
-            'tipoDocumento' => $alumnosModel->getTipoDocumentos(),
-            'acudiente' => $alumnosModel->getAcudientes(),
-            'grupoSanguineo' => $alumnosModel->getGrupoSanguineo(),
-        ];
+        try {
+            $alumnosModel = new Alumnos_model();
+            $validation = \Config\Services::validation();
+            $data  = [
+                'alumno' => $alumnosModel->getAlumno($id),
+                'genero' => $alumnosModel->getGeneros(),
+                'tipoDocumento' => $alumnosModel->getTipoDocumentos(),
+                'acudiente' => $alumnosModel->getAcudientes(),
+                'grupoSanguineo' => $alumnosModel->getGrupoSanguineo(),
+                'validation' => $validation
+            ];
+
+            // var_dump($data['alumno']);
+            // die();
+            
+            echo view("layouts/header");
+            echo view("layouts/aside",$data);
+            echo view("admin/alumnos/edit",$data);
+            echo view("layouts/footer");
+        } catch (\Exception $e) {
+            echo "Error: " . $e->getMessage();
+        }
         
-		echo view("layouts/header");
-		echo view("layouts/aside",$data);
-		echo view("admin/alumnos/edit",$data);
-		echo view("layouts/footer");
     }
 
     public function update()

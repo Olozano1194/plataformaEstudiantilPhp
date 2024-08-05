@@ -31,7 +31,7 @@ class Acudientes extends Controller {
 
     public function add()
     {
-        $acudientesModel = new Acudientes_model();
+        $AcudientesModel = new Acudientes_model();
 
         $fechaIngreso = date('Y-m-d');
 
@@ -86,8 +86,8 @@ class Acudientes extends Controller {
             ];
 
             // Guardar usuario y obtener ID
-            if ($alumnosModel->saveUsuario($dataUsuario)) {
-                $idUsuario = $alumnosModel->lastID();
+            if ($AcudientesModel->saveUsuario($dataUsuario)) {
+                $idUsuario = $AcudientesModel->lastID();
 
                 // Guardar estudiante
                 $this->saveAcudiente($idUsuario, $nombres, $genero, $email, $celular, $direccion, $profesion);
@@ -127,23 +127,36 @@ class Acudientes extends Controller {
 
     public function edit($id)
     {
-        $acudientesModel = new Acudientes_model();
-		$data  = [
-            'acudiente' => $acudientesModel->getAcudiente($id),
-            'genero' => $acudientesModel->getGeneros(),
-        ];
-        
-		echo view("layouts/header");
-		echo view("layouts/aside",$data);
-		echo view("admin/acudientes/edit",$data);
-		echo view("layouts/footer");
+        try {
+            $acudientesModel = new Acudientes_model();
+            $validation = \Config\Services::validation();
+    
+            
+            $data = [
+                'acudiente' => $acudientesModel->getAcudiente($id),
+                'genero' => $acudientesModel->getGeneros(),
+                'validation' => $validation
+            ];
+
+            // var_dump($id);
+            // var_dump($data['acudiente']);
+            // die();
+    
+            echo view("layouts/header");
+            echo view("layouts/aside", $data);
+            echo view("admin/acudientes/edit", $data);
+            echo view("layouts/footer");
+        } catch (\Exception $e) {
+            echo "Error: " . $e->getMessage();
+        }
     }
 
     public function update()
     {
-        //iniciar el modelo
+            // Iniciar el modelo
         $acudientesModel = new Acudientes_model();
 
+        // Obtener datos del POST
         $idAcudiente = $this->request->getPost("idAcudiente");
         $idUsuario = $this->request->getPost("idUsuario");
         $nombres = $this->request->getPost("nombres");
@@ -153,51 +166,47 @@ class Acudientes extends Controller {
         $celular = $this->request->getPost("celular");
         $direccion = $this->request->getPost("direccion");
         $fechaIngreso = $this->request->getPost("fechaIngreso");
-                
         $username = $this->request->getPost("username");
         $password = $this->request->getPost("password");
 
-        //obtener el alumno actual
+        // Obtener el acudiente actual
         $acudienteActual = $acudientesModel->getAcudiente($idAcudiente);
 
-        //Configurar reglas de validación
+        // Configurar reglas de validación
         $validation = \Config\Services::validation();
-
         $validation->setRules([
             'nombres' => 'required',
             'genero' => 'required',
             'profesion' => 'required',
-            'email' => 'required' . ($email != $alumnoActual->email ? '|is_unique[estudiantes.email]' : ''),
+            'email' => 'required' . ($email != $acudienteActual->email ? '|is_unique[estudiantes.email]' : ''),
             'celular' => 'required',
             'direccion' => 'required',
-            'username' => 'required'. ($username != $alumnoActual->username ? '|is_unique[estudiantes.username]' : ''),
+            'username' => 'required' . ($username != $acudienteActual->username ? '|is_unique[usuarios.username]' : ''),
             'password' => 'required'
-            
         ]);
 
-        //Ejecutar la validación
+        // Ejecutar la validación
         if ($validation->withRequest($this->request)->run()) {
             // Preparar datos para actualizar usuario
             $data = [
                 'username' => $username,
-                'password' => sha1($password),  
+                'password' => sha1($password),
             ];
 
-            //Actualizar usuario en la base de datos
-            if ($acudientesModel->updateUsuario($idUsuario, $dataUsuario)) {
+            // Actualizar usuario en la base de datos
+            if ($acudientesModel->updateUsuario($idUsuario, $data)) {
                 // Actualizar estudiante
-                $acudientesModel->updateEstudiante($idAcudiente,$nombres,$genero,$profesion,$email,$celular,$direccion);
-    
+                $acudientesModel->updateAcudiente($idAcudiente, $nombres, $genero, $profesion, $email, $celular, $direccion);
+
                 // Mostrar mensaje de éxito y redirigir
-                session()->setFlashdata("Atualizado", "La información se actualizó exitosamente");
+                session()->setFlashdata("actualizado", "La información se actualizó exitosamente");
                 return redirect()->to(base_url("registrar/acudientes"));
-            }else {
+            } else {
                 // Mostrar mensaje de error si no se pudo actualizar el usuario
                 session()->setFlashdata("error", "No se pudo actualizar la información del usuario");
-                return redirect()->to(base_url("registrar/acudientes/edit/" . $idAlumno));
+                return redirect()->to(base_url("registrar/acudientes/edit/" . $idAcudiente));
             }
-
-        }else {
+        } else {
             // Mostrar vista de edición con errores de validación
             return $this->edit($idAcudiente);
         }

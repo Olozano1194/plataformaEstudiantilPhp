@@ -44,6 +44,7 @@
                                     </select>
                                     <?php if (isset($validation)) { echo $validation->getError('tipoDocumento', '<span class="help-block">', '</span>'); } ?>
                                 </div>
+                                <!-- numero de documento -->
                                 <div class="col-md-4 <?php echo (isset($validation) && $validation->hasError('num_documento')) ? 'has-error' : ''; ?>">
                                     <label for="num_documento">Numero de Documento:</label>
                                     <input type="text" class="form-control" id="num_documento" name="num_documento" value="<?= old('num_documento'); ?>">
@@ -89,6 +90,7 @@
                                     <input type="text" class="form-control" id="email" name="email" value="<?= old("email");?>">
                                     <?= session("email","<span class='help-block'>","</span>");?>
                                 </div>
+                                <!-- Celular -->
                                 <div class="col-md-4 <?= session("celular") ? 'has-error':'';?>">
                                     <label for="celular">Celular:</label>
                                     <input type="text" class="form-control" id="celular" name="celular" value="<?= old("celular");?>">

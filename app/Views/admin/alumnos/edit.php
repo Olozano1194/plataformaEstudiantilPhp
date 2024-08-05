@@ -25,146 +25,165 @@
                         <form action="<?php echo base_url();?>registrar/alumnos/update" method="POST" class="form-horizontal">
                             <input type="hidden" value="<?php echo $alumno->id;?>" name="idAlumno">
                             <input type="hidden" value="<?php echo $alumno->usuario_id;?>" name="idUsuario">
-
+                            <!-- Nombre completo -->
                             <div class="form-group">
-                                <div class="col-md-6 <?php echo form_error("nombres") !=false ? 'has-error':'';?>">
+                                <div class="col-md-6 <?= isset($validation) && $validation->hasError("nombres") ? 'has-error':'';?>">
                                     <label for="nombres ">Nombre Completo:</label>
-                                    <input type="text" class="form-control" id="nombres" name="nombres" value="<?php echo form_error("nombres") !=false ? set_value("nombres") : $alumno->nombres;?>">
-                                    <?php echo form_error("nombres","<span class='help-block'>","</span>");?>
+                                    <input type="text" class="form-control" id="nombres" name="nombres" value="<?= old("nombres", $alumno->nombres); ?>">
+                                    <?php if (isset($validation) && $validation->hasError('nombres')) : ?>
+                                        <span class="help-block"><?= $validation->getError('nombres'); ?></span>
+                                    <?php endif; ?>
                                 </div>   
                             </div>
-
+                            <!-- Tipo de documento -->
                             <div class="form-group">
-                                <div class="col-md-4 <?php echo form_error("tipoDocumento") !=false ? 'has-error':'';?>">
+                                <div class="col-md-4 <?= isset($validation) && $validation->hasError('tipoDocumento') ? 'has-error' : ''; ?>">
                                     <label for="tipoDocumento">Tipo de Documento:</label>
                                     <select name="tipoDocumento" id="tipoDocumento" class="form-control">
                                         <option value="">Seleccione...</option>
-                                        <?php if(form_error("tipoDocumento") != false || set_value("tipoDocumento") != false): ?>
-                                            <?php foreach($tipoDocumento as $tipoDocumento):?>
-                                                <option value="<?php echo $tipoDocumento->id?>"<?php echo set_select("tipoDocumento",$tipoDocumento->id)?>><?php echo $tipoDocumento->sigla ." - ". $tipoDocumento->nombre;?></option>
-                                            <?php endforeach;?>
-                                        <?php else:?>
-                                            <?php foreach($tipoDocumento as $tipoDocumento):?>
-                                                <option value="<?php echo $tipoDocumento->id?>"<?php echo $tipoDocumento->id == $alumno->tipodocumento_id ? 'selected':'';?>><?php echo $tipoDocumento->sigla ." - ". $tipoDocumento->nombre;?></option>
-                                            <?php endforeach;?>
-                                        <?php endif;?>
+                                        <?php foreach ($tipoDocumento as $doc) : ?>
+                                            <option value="<?= $doc->id ?>" <?= old('tipoDocumento', $alumno->tipodocumento_id) == $doc->id ? 'selected' : ''; ?>>
+                                                <?= $doc->sigla . " - " . $doc->nombre; ?>
+                                            </option>
+                                        <?php endforeach; ?>
                                     </select>
-                                    <?php echo form_error("tipoDocumento","<span class='help-block'>","</span>");?>
+                                    <?php if (isset($validation) && $validation->hasError('tipoDocumento')) : ?>
+                                        <span class="help-block"><?= $validation->getError('tipoDocumento'); ?></span>
+                                    <?php endif; ?>
                                 </div>
-                                <div class="col-md-4 <?php echo form_error("num_documento") !=false ? 'has-error':'';?>">
+                                <!-- Numero de documento -->
+                                <div class="col-md-4 <?= isset($validation) && $validation->hasError("num_documento") ? 'has-error':'';?>">
                                     <label for="num_documento">Numero de Documento:</label>
-                                    <input type="text" class="form-control" id="num_documento" name="num_documento" value="<?php echo form_error("num_documento") !=false ? set_value("num_documento") : $alumno->num_documento;?>">
-                                    <?php echo form_error("num_documento","<span class='help-block'>","</span>");?>
-                                </div>    
+                                    <input type="text" class="form-control" id="num_documento" name="num_documento" value="<?= old("num_documento", $alumno->num_documento); ?>">
+                                    <?php if (isset($validation) && $validation->hasError('num_documento')) : ?>
+                                        <span class="help-block"><?= $validation->getError('num_documento'); ?></span>
+                                    <?php endif; ?>
+                                </div>  
                             </div>
-
+                            <!-- Genero -->
                             <div class="form-group">
-                                <div class="col-md-4 <?php echo form_error("genero") !=false ? 'has-error':'';?>">
+                                <div class="col-md-4 <?= isset($validation) && $validation->hasError('genero') ? 'has-error' : ''; ?>">
                                     <label for="genero">Genero:</label>
                                     <select name="genero" id="genero" class="form-control">
                                         <option value="">Seleccione...</option>
-                                        <?php if(form_error("genero") != false || set_value("genero") != false): ?>
-                                            <?php foreach($genero as $genero):?>
-                                                <option value="<?php echo $genero->id?>"<?php echo set_select("genero",$genero->id)?>><?php echo $genero->nombre;?></option>
-                                            <?php endforeach;?>
-                                        <?php else:?>
-                                            <?php foreach($genero as $genero):?>
-                                                <option value="<?php echo $genero->id?>"<?php echo $genero->id == $alumno->genero_id ? 'selected':'';?>><?php echo $genero->nombre;?></option>
-                                            <?php endforeach;?>
-                                        <?php endif;?>
+                                        <?php foreach ($genero as $gen) : ?>
+                                            <option value="<?= $gen->id ?>" <?= old('genero', $alumno->genero_id) == $gen->id ? 'selected' : ''; ?>>
+                                                <?= $gen->nombre; ?>
+                                            </option>
+                                        <?php endforeach; ?>
                                     </select>
-                                    <?php echo form_error("genero","<span class='help-block'>","</span>");?>
+                                    <?php if (isset($validation) && $validation->hasError('genero')) : ?>
+                                        <span class="help-block"><?= $validation->getError('genero'); ?></span>
+                                    <?php endif; ?>
                                 </div>
-                                <div class="col-md-4 <?php echo form_error("grupoSanguineo") !=false ? 'has-error':'';?>">
+                                 <!-- Grupo Sanguineo -->
+                                <div class="col-md-4 <?= isset($validation) && $validation->hasError("grupoSanguineo") ? 'has-error':'';?>">
                                     <label for="grupoSanguineo">Grupo Sanguineo:</label>
                                     <select name="grupoSanguineo" id="grupoSanguineo" class="form-control">
                                         <option value="">Seleccione...</option>
-                                        <?php if(form_error("grupoSanguineo") != false || set_value("grupoSanguineo") != false): ?>
-                                            <?php foreach($grupoSanguineo as $grupoSanguineo):?>
-                                                <option value="<?php echo $grupoSanguineo->id?>"<?php echo set_select("grupoSanguineo",$grupoSanguineo->id)?>><?php echo $grupoSanguineo->descripcion;?></option>
-                                            <?php endforeach;?>
-                                        <?php else:?>
-                                            <?php foreach($grupoSanguineo as $grupoSanguineo):?>
-                                                <option value="<?php echo $grupoSanguineo->id?>"<?php echo $grupoSanguineo->id == $alumno->gruposanguineo_id ? 'selected':'';?>><?php echo $grupoSanguineo->descripcion;?></option>
-                                            <?php endforeach;?>
-                                        <?php endif;?>
+                                        <?php foreach($grupoSanguineo as $grupo): ?>
+                                            <option value="<?= $grupo->id ?>" <?= old('grupoSanguineo', $alumno->gruposanguineo_id) == $grupo->id ? 'selected' : ''; ?>>
+                                                <?= $grupo->descripcion; ?>
+                                            </option>
+                                        <?php endforeach; ?>
                                     </select>
-                                    <?php echo form_error("grupoSanguineo","<span class='help-block'>","</span>");?>
+                                    <?php if (isset($validation) && $validation->hasError('grupoSanguineo')) : ?>
+                                        <span class="help-block"><?= $validation->getError('grupoSanguineo'); ?></span>
+                                    <?php endif; ?>
                                 </div>
                             </div>
-                            
+                            <!-- Fecha de Nacimiento -->
                             <div class="form-group">
-                                <div class="col-md-4 <?php echo form_error("fecha_nacimiento") !=false ? 'has-error':'';?>">
+                                <div class="col-md-4 <?= isset($validation) && $validation->hasError("fecha_nacimiento") ? 'has-error':'';?>">
                                     <label for="fecha_nacimiento">Fecha Nacimiento:</label>
-                                    <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" value="<?php echo form_error("fecha_nacimiento") !=false ? set_value("fecha_nacimiento") : $alumno->fecha_nacimiento;?>">
-                                    <?php echo form_error("fecha_nacimiento","<span class='help-block'>","</span>");?>
+                                    <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" value="<?= old("fecha_nacimiento", $alumno->fecha_nacimiento); ?>">
+                                    <?php if(isset($validation) && $validation->hasError("fecha_nacimiento")) : ?>
+                                        <span class='help-block'><?= $validation->getError('fecha_nacimiento'); ?></span>
+                                    <?php endif; ?>
                                 </div>
                             </div>
-
+                            <!-- Email -->
                             <div class="form-group">
-                                <div class="col-md-4 <?php echo form_error("email") !=false ? 'has-error':'';?>">
+                                <div class="col-md-4 <?= isset($validation) && $validation->hasError("email") ? 'has-error':'';?>">
                                     <label for="email">Email:</label>
-                                    <input type="text" class="form-control" id="email" name="email" value="<?php echo form_error("email") !=false ? set_value("email") : $alumno->email;?>">
-                                    <?php echo form_error("email","<span class='help-block'>","</span>");?>
+                                    <input type="text" class="form-control" id="email" name="email" value="<?= old("email", $alumno->email); ?>">
+                                    <?php if (isset($validation) && $validation->hasError('email')) : ?>
+                                        <span class="help-block"><?= $validation->getError('email'); ?></span>
+                                    <?php endif; ?>
                                 </div>
-                                <div class="col-md-4 <?php echo form_error("celular") !=false ? 'has-error':'';?>">
+                                <!-- Celular -->
+                                <div class="col-md-4 <?= isset($validation) && $validation->hasError("celular") ? 'has-error':'';?>">
                                     <label for="celular">Celular:</label>
-                                    <input type="text" class="form-control" id="celular" name="celular" value="<?php echo form_error("celular") !=false ? set_value("celular") : $alumno->celular;?>">
-                                    <?php echo form_error("celular","<span class='help-block'>","</span>");?>
+                                    <input type="text" class="form-control" id="celular" name="celular" value="<?= old("celular", $alumno->celular); ?>">
+                                    <?php if (isset($validation) && $validation->hasError('celular')) : ?>
+                                        <span class="help-block"><?= $validation->getError('celular'); ?></span>
+                                    <?php endif; ?>
                                 </div>
                             </div>
-
+                            <!-- Direccion -->
                             <div class="form-group">
-                                <div class="col-md-4 <?php echo form_error("direccion") !=false ? 'has-error':'';?>">
+                                <div class="col-md-4 <?= isset($validation) && $validation->hasError("direccion") ? 'has-error':'';?>">
                                     <label for="direccion">Dirección:</label>
-                                    <input type="text" class="form-control" id="direccion" name="direccion" value="<?php echo form_error("direccion") !=false ? set_value("direccion") : $alumno->direccion;?>">
-                                    <?php echo form_error("direccion","<span class='help-block'>","</span>");?>
+                                    <input type="text" class="form-control" id="direccion" name="direccion" value="<?= old("direccion", $alumno->direccion); ?>">
+                                    <?php if (isset($validation) && $validation->hasError('direccion')) : ?>
+                                        <span class="help-block"><?= $validation->getError('direccion'); ?></span>
+                                    <?php endif; ?>
                                 </div>
                             </div>
 
+                            <!-- Foto -->
                             <div class="form-group">
-                                <div class="col-md-4 <?php echo form_error("foto") !=false ? 'has-error':'';?>">
+                                <div class="col-md-4 <?= isset($validation) && $validation->hasError("foto") ? 'has-error':'';?>">
                                     <label for="foto">Foto:</label>
-                                    <input type="file" id="foto" name="foto" value="<?php echo set_value("foto");?>">
-                                    <?php echo form_error("foto","<span class='help-block'>","</span>");?>
+                                    <input type="file" class="form-control" id="foto" name="foto">
+                                    <?php if (isset($validation) && $validation->hasError('foto')) : ?>
+                                        <span class="help-block"><?= $validation->getError('foto'); ?></span>
+                                    <?php endif; ?>
                                 </div>
                             </div>
 
+                            <!-- Acudiente -->
                             <div class="form-group">
-                                <div class="col-md-4 <?php echo form_error("acudiente") !=false ? 'has-error':'';?>">
+                                <div class="col-md-4 <?= isset($validation) && $validation->hasError('acudiente') ? 'has-error' : ''; ?>">
                                     <label for="acudiente">Acudiente:</label>
                                     <select name="acudiente" id="acudiente" class="form-control">
                                         <option value="">Seleccione...</option>
-                                        <?php if(form_error("acudiente") != false || set_value("acudiente") != false): ?>
-                                            <?php foreach($acudiente as $acudiente):?>
-                                                <option value="<?php echo $acudiente->id?>"<?php echo set_select("acudiente",$acudiente->id)?>><?php echo $acudiente->nombres;?></option>
-                                            <?php endforeach;?>
-                                        <?php else:?>
-                                            <?php foreach($acudiente as $acudiente):?>
-                                                <option value="<?php echo $acudiente->id?>"<?php echo $acudiente->id == $alumno->acudiente_id ? 'selected':'';?>><?php echo $acudiente->nombres;?></option>
-                                            <?php endforeach;?>
-                                        <?php endif;?>
+                                        <?php foreach ($acudiente as $acud) : ?>
+                                            <option value="<?= $acud->id ?>" <?= old('acudiente', $alumno->acudiente_id) == $acud->id ? 'selected' : ''; ?>>
+                                                <?= $acud->nombres; ?>
+                                            </option>
+                                        <?php endforeach; ?>
                                     </select>
-                                    <?php echo form_error("acudiente","<span class='help-block'>","</span>");?>
+                                    <?php if (isset($validation) && $validation->hasError('acudiente')) : ?>
+                                        <span class="help-block"><?= $validation->getError('acudiente'); ?></span>
+                                    <?php endif; ?>
                                 </div>
                             </div>
 
+                            <!-- Username -->
                             <div class="form-group">
-                                <div class="col-md-4 <?php echo form_error("username") !=false ? 'has-error':'';?>">
+                                <div class="col-md-4 <?= isset($validation) && $validation->hasError("username") ? 'has-error':'';?>">
                                     <label for="username">Username:</label>
-                                    <input type="text" class="form-control" id="username" name="username" value="<?php echo form_error("username") !=false ? set_value("username") : $alumno->usuario;?>">
-                                    <?php echo form_error("username","<span class='help-block'>","</span>");?>
+                                    <input type="text" class="form-control" id="username" name="username" value="<?= old("username", $alumno->usuario); ?>">
+                                    <?php if (isset($validation) && $validation->hasError('username')) : ?>
+                                        <span class="help-block"><?= $validation->getError('username'); ?></span>
+                                    <?php endif; ?>
                                 </div>
-                                <div class="col-md-4 <?php echo form_error("password") !=false ? 'has-error':'';?>">
+
+                                <!-- Password -->
+                                <div class="col-md-4 <?= isset($validation) && $validation->hasError("password") ? 'has-error':'';?>">
                                     <label for="password">Password:</label>
-                                    <input type="password" class="form-control" id="password" name="password" value="<?php echo form_error("password") !=false ? set_value("password") : $alumno->contraseña;?>">
-                                    <?php echo form_error("password","<span class='help-block'>","</span>");?>
+                                    <input type="password" class="form-control" id="password" name="password">
+                                    <?php if (isset($validation) && $validation->hasError('password')) : ?>
+                                        <span class="help-block"><?= $validation->getError('password'); ?></span>
+                                    <?php endif; ?>
                                 </div>
                             </div>
 
+                            <!-- Btn Update -->
                             <div class="form-group">
                                 <div class="col-md-12">
-                                   <button type="submit" class="btn btn-success"><span class="fa fa-edit"></span> Actualizar</button>
+                                    <button type="submit" class="btn btn-success"><span class="fa fa-edit"></span> Actualizar</button>
                                 </div>
                             </div>
                         </form>

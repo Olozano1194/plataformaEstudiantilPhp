@@ -53,15 +53,21 @@ class Acudientes_model extends Model {
     public function getAcudiente($id)
     {
       $builder = $this->db->table('acudiente a');
-      $builder ->select("a.*, g.nombre as genero, u
-      .username as usuario, u.password as contraseña");
-      $builder->join('genero g', 'a.genero_id
+      $builder ->select("a.*, g.nombre as genero, u.username as username, u.password as contraseña");
+      $builder->join('generos g', 'a.genero_id
       = g.id');
-      $builder ->join('usuario u', 'a.usuario_id= u.id');
+      $builder ->join('usuarios u', 'a.usuario_id= u.id');
       $builder->where('a.id', $id);
       $builder->where('a.estado', '1');
-      $query = $builder->get();
-      return $query->getRow();
+      $resultados = $builder->get();
+
+      //  // Depuración: Verifica la consulta y los resultados
+      // echo $this->db->getLastQuery(); // Muestra la última consulta SQL ejecutada
+      // var_dump($resultados->getResult()); // Muestra todos los resultados
+      // die();
+
+      // $acudiente = $resultados->getRow();
+      // return $acudiente;
       
     }
 
